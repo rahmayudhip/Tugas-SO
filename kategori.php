@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,800&display=swap" rel="stylesheet" />
 
-    <title>MyATK | Stationary Store</title>
+    <title>Kategori</title>
   </head>
   <body>
     <!--Navbar Start-->
@@ -25,17 +25,17 @@
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav me-auto my-2 my-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Shop</a>
+              <a class="nav-link active" href="#">Shop</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="#">About</a>
             </li>
           </ul>
           <form class="d-flex">
-            <a class="nav-link" href="login.html">LOGIN</a>
+            <a class="nav-link" href="#">LOGIN</a>
             <svg href="#" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
               <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
               <path
