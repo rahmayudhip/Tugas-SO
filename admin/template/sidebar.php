@@ -6,19 +6,25 @@
         <a href="index.php" class="list-group-item list-group-item-action p-3" aria-current="true">
             <div class="d-flex justify-content-between align-items-center">
                 <span class="">Dashboard</span>
-                <i class="fas fa-home fa-lg fa-fw"></i>
+                <i class="fas fa-home fa-lg fa-fw text-primary"></i>
             </div>
         </a>
         <a href="pembeli.php" class="list-group-item list-group-item-action p-3" aria-current="true">
             <div class="d-flex justify-content-between align-items-center">
                 <span class="">Data Pembeli</span>
-                <i class="fas fa-users fa-lg"></i>
+                <i class="fas fa-users fa-lg fa-fw text-primary"></i>
             </div>
         </a>
-        <a href="account.html" class="list-group-item list-group-item-action p-3" aria-current="true">
+        <a href="transaksi.php" class="list-group-item list-group-item-action p-3" aria-current="true">
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="">Data Transaksi</span>
+                <i class="fas fa-clipboard-list fa-lg fa-fw  fa-fw text-primary"></i>
+            </div>
+        </a>
+        <a href="barang.php" class="list-group-item list-group-item-action p-3" aria-current="true">
             <div class="d-flex justify-content-between align-items-center">
                 <span class="">Data Barang</span>
-                <i class="fas fa-briefcase fa-lg fa-fw"></i>
+                <i class="fas fa-briefcase fa-lg fa-fw  fa-fw text-primary"></i>
             </div>
         </a>
     </div>

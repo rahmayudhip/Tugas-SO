@@ -25,3 +25,6 @@
 
     <!-- footer -->
     <?php include('template/bottom.php'); ?>
+  </body>
+
+  </html>

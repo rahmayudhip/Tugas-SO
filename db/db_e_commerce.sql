@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2021 at 08:02 AM
+-- Generation Time: Jul 05, 2021 at 03:37 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -45,7 +45,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `email`, `name`, `number`, `address`, `gender`, `birth_date`, `id_role`) VALUES
-(1, 'ssasongko', 'a9d2a0ae952744ebda4d2543e1e09398', 'kokonur1020@gmail.com', 'Nur Sasongko', '089678758351', 'Jl. Gatot Subroto No. 19G', 'L', '2001-07-16', 1);
+(1, 'ssasongko', 'a9d2a0ae952744ebda4d2543e1e09398', 'kokonur1020@gmail.com', 'Nur Sasongko', '089678758351', 'Jl. Gatot Subroto No. 19G', 'L', '2001-07-16', 1),
+(2, 'dean', '48767461cb09465362c687ae0c44753b', 'dean@gmail.com', 'Dean Ghiffari Faturrahman', '0812456798', 'Komplek GBA Kota Bandung', 'L', '2001-05-27', 2),
+(3, 'iyudd', '2cbfc3d0d48699cdee0aa6cae8c406d8', 'iyudd@gmail.com', 'Rahmayudhi Prakoso', '08456798132', 'Jl. Sekeloa No. 20 Kota Bandung', 'L', '2000-12-07', 2),
+(4, 'mangikiw', '52a1050ab7d8474a5dea270d979831df', 'rizkidwi@gmail.com', 'Rizki Dwi Nugraha', '0879456132', 'Lembang', 'L', '2001-06-12', 2),
+(5, 'faisholl', 'ba1f68fe8982f09030f74312bf4fa63b', 'faishal@gmail.com', 'Muhammad Faishal', '0856789123', 'Cililin Jauh Kabupaten Bandung Barat', 'P', '2000-01-01', 2);
 
 -- --------------------------------------------------------
 
@@ -90,7 +94,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

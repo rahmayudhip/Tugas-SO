@@ -34,7 +34,7 @@
                 </thead>
                 <tbody>
                   <?php
-                  $sql = "SELECT * FROM user WHERE id_role=1";
+                  $sql = "SELECT * FROM user WHERE id_role=2";
                   $result = $db->query($sql);
                   $rows = $result->fetch_all(MYSQLI_ASSOC);
                   $no = 0;
@@ -77,3 +77,6 @@
       $('#table_id').DataTable();
     });
   </script>
+</body>
+
+</html>

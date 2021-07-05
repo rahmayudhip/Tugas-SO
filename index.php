@@ -49,77 +49,85 @@ session_start();
             </svg>
           </form>
         <?php else : ?>
-          <!-- <ul class="navbar-nav me-auto my-2 my-lg-0">
-            <li class="nav-item"> -->
-          <a class="nav-link" href="profile.php">Hi, <?= $_SESSION["Name"]; ?></a>
-          <a href="logout.php">Button Sementara Logout</a>
-          <!-- </li>
-          </ul> -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi, <?= $_SESSION["Name"] ?></a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="logout.php">Logout</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         <?php endif; ?>
       </div>
     </div>
   </nav>
-</body>
+  <!--Navbar Ends-->
 
-<!--Navbar Ends-->
+  <!-- Jumbotron Start-->
+  <section>
+    <div class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 pt-4 text-center"></div>
+          <h6>Sale Up to 40% Today !</h6>
+          <h1>Winsor and Newtons Cotman <br />Watercolours</h1>
+          <button class="btn1 mt-2">Buy Now Today</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Jumbotron End-->
 
-<!-- Jumbotron Start-->
-<section>
-  <div class="main">
+  <!--Card Start-->
+  <br />
+  <br />
+  <br />
+  <section id="wrapper_1">
+    <div class="container1" style="display: inline-block">
+      <img src="images\kertas.png" alt="Snow" style="width: 100%" />
+      <button class="btn">Kertas</button>
+    </div>
+    <div class="container1" style="display: inline-block">
+      <img src="images\penggaris.png" alt="Snow" style="width: 100%" />
+      <button class="btn">Alat Gambar</button>
+    </div>
+    <div class="container1" style="display: inline-block">
+      <img src="images\gunting.png" alt="Snow" style="width: 100%" />
+      <button class="btn">Alat Pemotong</button>
+    </div>
+  </section>
+  <br />
+  <br />
+
+  <!--Card Ends-->
+
+  <!--Footer Start-->
+  <section class="news py-5">
     <div class="container">
       <div class="row">
-        <div class="col-lg-7 pt-4 text-center"></div>
-        <h6>Sale Up to 40% Today !</h6>
-        <h1>Winsor and Newtons Cotman <br />Watercolours</h1>
-        <button class="btn1 mt-2">Buy Now Today</button>
+        <div class="col-lg-9 me-auto text-left">
+          <h1>Touch with us</h1>
+          <input type="text" placeholder="Enter Your Email" />
+          <button class="btn3">Submit</button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-11"></div>
+        <div class="row"></div>
       </div>
     </div>
-  </div>
-</section>
-<!-- Jumbotron End-->
+  </section>
+  <!--Footer end-->
 
-<!--Card Start-->
-<br />
-<br />
-<br />
-<section id="wrapper_1">
-  <div class="container1" style="display: inline-block">
-    <img src="images\kertas.png" alt="Snow" style="width: 100%" />
-    <button class="btn">Kertas</button>
-  </div>
-  <div class="container1" style="display: inline-block">
-    <img src="images\penggaris.png" alt="Snow" style="width: 100%" />
-    <button class="btn">Alat Gambar</button>
-  </div>
-  <div class="container1" style="display: inline-block">
-    <img src="images\gunting.png" alt="Snow" style="width: 100%" />
-    <button class="btn">Alat Pemotong</button>
-  </div>
-</section>
-<br />
-<br />
-
-<!--Card Ends-->
-
-<!--Footer Start-->
-<section class="news py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-9 me-auto text-left">
-        <h1>Touch with us</h1>
-        <input type="text" placeholder="Enter Your Email" />
-        <button class="btn3">Submit</button>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-        </svg>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-11"></div>
-      <div class="row"></div>
-    </div>
-  </div>
-</section>
-<!--Footer end-->
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
 </html>
