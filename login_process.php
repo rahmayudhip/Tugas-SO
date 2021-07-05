@@ -15,7 +15,11 @@ if ($db->connect_errno == 0) {
                 $_SESSION["Username"] = $data["username"];
                 $_SESSION["Name"] = $data["name"];
                 $_SESSION["RoleID"] = $data["id_role"];
-                header("Location: index.php");
+                if ($data["id_role"] == 1) {
+                    header("Location: Admin/index.php");
+                } else {
+                    header("Location: index.php");
+                }
             } else
                 header("Location: login.php?error=1");
         }
