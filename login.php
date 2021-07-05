@@ -22,7 +22,7 @@
       <div class="container">
         <div class="row">
           <div class="login-text">
-            <img src="images/user.png" style="width:190px; height:180px;">
+            <img src="images/Secure login-pana.png" style="width:590px; height:590px;">
             <div style="float:right">
               <center>
                 <h1>MY ATK</h1>
