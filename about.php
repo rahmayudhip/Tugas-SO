@@ -1,8 +1,5 @@
-<?php
-include_once("functions.php");
-session_start();
-
-?>
+<?php include_once("functions.php");
+session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,41 +23,38 @@ session_start();
 
   <!-- Jumbotron Start-->
   <section>
-    <div class="main">
+    <div class="p-5 mb-5" style="background: rgba(238, 220, 157, 0.33); color: rgba(0, 0, 0, 0.73);">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-7 pt-4 text-center"></div>
-          <h6>Sale Up to 40% Today !</h6>
-          <h1>Winsor and Newtons Cotman <br />Watercolours</h1>
-          <button class="btn1 mt-2">Buy Now Today</button>
-        </div>
+        About
       </div>
     </div>
   </section>
   <!-- Jumbotron End-->
 
-  <!--Card Start-->
-  <br />
-  <br />
-  <br />
-  <section id="wrapper_1">
-    <div class="container1" style="display: inline-block">
-      <img src="images\kertas.png" alt="Snow" style="width: 100%" />
-      <button class="btn">Kertas</button>
+  <!--Icon Start-->
+  <section id="wrapper_2">
+    <div class="container3">
+      <img src="images\alamat.png" alt="kertas" style="width: 120" />
+      <br>
+      <br />
+      <h3 class="subtitle">Jl.Ciliwung No.4<br>
+        Kecamatan Sukasari<br>
+        Kota Bandung</h3>
     </div>
-    <div class="container1" style="display: inline-block">
-      <img src="images\penggaris.png" alt="Snow" style="width: 100%" />
-      <button class="btn">Alat Gambar</button>
+    <div class="container3">
+      <img src="images\telepon.png" alt="gunting" style="width: 120" />
+      <br>
+      <br />
+      <h3 class="subtitle">Free toll : 0896-7932-1231</h3>
     </div>
-    <div class="container1" style="display: inline-block">
-      <img src="images\gunting.png" alt="Snow" style="width: 100%" />
-      <button class="btn">Alat Pemotong</button>
+    <div class="container3">
+      <img src="images\email.png" alt="penggaris" style="width: 120" />
+      <br>
+      <br />
+      <h3 class="subtitle">myatk@gmail.com</h3>
     </div>
   </section>
-  <br />
-  <br />
-
-  <!--Card Ends-->
+  <!--Icon End-->
 
   <!--Footer Start-->
   <section class="news py-5">
@@ -82,7 +76,6 @@ session_start();
     </div>
   </section>
   <!--Footer end-->
-
 </body>
 
 </html>

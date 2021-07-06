@@ -206,10 +206,10 @@ h3.subtitle {
   padding-right: 5px;
 }
 /* Edit urang */
-.cekot2{
+.cekot2 {
   font-size: 2rem;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 #wrapper_3 {
   left: 70px auto;
@@ -218,28 +218,28 @@ h3.subtitle {
   display: flex;
   justify-content: space-around;
 }
-.soping{
+.soping {
   font-size: 2rem;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   margin-top: 60px;
-  margin-bottom : 60px;
+  margin-bottom: 60px;
   letter-spacing: 3px;
 }
-.cekot{
+.cekot {
   font-size: 2rem;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   margin-top: 60px;
-  margin-bottom : 60px;
+  margin-bottom: 60px;
   letter-spacing: 3px;
 }
 
-.btn-link{
+.btn-link {
   color: #3d3d3c !important;
 }
 
-.btn-link.active{
+.btn-link.active {
   border-bottom: 10px solid #3d3d3c;
 }
 
