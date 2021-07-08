@@ -18,6 +18,8 @@ session_start();
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,800&display=swap" rel="stylesheet" />
+
+
 </head>
 
 <body>
@@ -68,22 +70,20 @@ session_start();
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label">Alamat Lengkap</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="address" rows="3" value="<?php echo $dataPengguna["address"]; ?>"></textarea>
+              <textarea class="form-control" name="address" rows="3"><?php echo $dataPengguna["address"]; ?></textarea>
             </div>
           </div>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
             <div class="col-sm-10">
               <div class="form-check-inline">
-                <input class="form-check-input" type="radio" name="gender" value="L" <?php if ($dataPengguna["gender"] == 'L')
-                                                                                        echo " checked"; ?>>
+                <input class="form-check-input" type="radio" name="gender" value="L" <?php if ($dataPengguna["gender"] == 'L') echo " checked"; ?>>
                 <label class="form-check-label">
                   Pria
                 </label>
               </div>
               <div class="form-check-inline">
-                <input class="form-check-input" type="radio" name="gender" value="P" <?php if ($dataPengguna["gender"] == 'P')
-                                                                                        echo " checked"; ?>>
+                <input class="form-check-input" type="radio" name="gender" value="P" <?php if ($dataPengguna["gender"] == 'P') echo " checked"; ?>>
                 <label class="form-check-label">
                   Wanita
                 </label>

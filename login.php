@@ -30,23 +30,23 @@
               </center>
               <br>
               <div class="card" style="width:450px;">
-                  <?php 
-                    if(isset($_GET['error'])){
-                       if($_GET['error'] == "1"){
-                            echo "<div class='alert alert-danger' role='alert'>
+                <?php
+                if (isset($_GET['error'])) {
+                  if ($_GET['error'] == "1") {
+                    echo "<div class='alert alert-danger' role='alert'>
                                     Login GAGAL! | Username atau password salah!
                                   </div>";
-                       }else if($_GET['error'] == "2"){
-                            echo "<div class='alert alert-danger' role='alert'>
+                  } else if ($_GET['error'] == "2") {
+                    echo "<div class='alert alert-danger' role='alert'>
                                     Login GAGAL! | Mungkin Database tidak terkoneksi
                                   </div>";
-                       }else if($_GET['error'] == "3"){
-                            echo "<div class='alert alert-danger' role='alert'>
+                  } else if ($_GET['error'] == "3") {
+                    echo "<div class='alert alert-danger' role='alert'>
                                     Login GAGAL! | terdapat kesalahan yang tidak terduga
                                   </div>";
-                          }
-                        }
-                  ?>
+                  }
+                }
+                ?>
                 <div class="card-body">
                   <form method="POST" action="login_process.php">
                     <label>Username :</label>

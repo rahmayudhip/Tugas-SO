@@ -18,13 +18,19 @@
         <a href="transaksi.php" class="list-group-item list-group-item-action p-3" aria-current="true">
             <div class="d-flex justify-content-between align-items-center">
                 <span class="">Data Transaksi</span>
-                <i class="fas fa-clipboard-list fa-lg fa-fw  fa-fw text-primary"></i>
+                <i class="fas fa-clipboard-list fa-lg fa-fw text-primary"></i>
+            </div>
+        </a>
+        <a href="jenis_barang.php" class="list-group-item list-group-item-action p-3" aria-current="true">
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="">Data Jenis Barang</span>
+                <i class="fas fa-cubes fa-lg fa-fw text-primary"></i>
             </div>
         </a>
         <a href="barang.php" class="list-group-item list-group-item-action p-3" aria-current="true">
             <div class="d-flex justify-content-between align-items-center">
                 <span class="">Data Barang</span>
-                <i class="fas fa-briefcase fa-lg fa-fw  fa-fw text-primary"></i>
+                <i class="fas fa-cube fa-lg fa-fw text-primary"></i>
             </div>
         </a>
     </div>

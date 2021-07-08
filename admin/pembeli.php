@@ -18,7 +18,7 @@
           <h1 class="mt-3 my-4">Data Akun Pembeli</h1>
           <div class="col-lg">
             <div class="table-responsive">
-              <table id="table_id" class="table border border-dark">
+              <table id="table_id" class="table table-striped table-hover" style="border: 0px">
                 <thead>
                   <tr class="bg-primary bg-gradient text-white align-middle">
                     <th>No</th>
