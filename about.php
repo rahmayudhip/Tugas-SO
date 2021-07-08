@@ -19,7 +19,7 @@ session_start() ?>
 </head>
 
 <body>
-  <?php navbar(); ?>
+  
 
   <!-- Jumbotron Start-->
   <section>
