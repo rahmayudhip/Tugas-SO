@@ -28,47 +28,78 @@ session_start();
     <?php navbar(); ?>
 
     <!-- Jumbotron Start-->
-    <section class="jumbotron">
-        <div class="container my-3">
-            <h1>Kertas Terbaik</h1>
-            <div class="row">
-                <div class="col-md-3 p-3 m-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="images/kertas/sidua4.jpg" class="card-img-top" alt="...">
+    <section class="jumbotron my-3">
+        <div class="container">
+            <h1>Kertas Terbaik di MYATK</h1>
+            <div class="row mt-4">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card p-2" style="width: 18rem;">
+                        <img src="images/kertas/sidua4.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Kertas Sidu A4</h5>
-                            <p class="card-text"><i class="fas fa-shopping-cart"></i>Harga Rp. 40.000/rim</p>
-                            <a href="#" class="btn btn-primary">Masukan ke Checkout</a>
+                            <p class="card-text">
+                                Jenis Barang : Kertas HVS <br>
+                                Merk : Sinar Dunia<br>
+                                Ukuran : A4<br>
+                                Gramatur : 70 Gram<br>
+                                1 pak isi 500 lembar<br>
+                                <br>
+                                <b>Harga : Rp. 40.000</b>
+                            </p>
+                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 p-3 m-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="images/kertas/siduf4.jpg" class="card-img-top" alt="...">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card p-2" style="width: 18rem;">
+                        <img src="images/kertas/siduf4.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Kertas Sidu F4</h5>
+                            <p class="card-text">
+                                Jenis Barang : Kertas HVS <br>
+                                Merk : Sinar Dunia<br>
+                                Ukuran : F4<br>
+                                Gramatur : 70 Gram<br>
+                                1 pak isi 500 lembar<br>
+                                <br>
+                                <b>Harga : Rp. 45.000</b>
+                            </p>
+                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 p-3 m-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="images/kertas/siduf4.jpg" class="card-img-top" alt="...">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card p-2" style="width: 18rem;">
+                        <img src="images/kertas/paperonea4.png" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Kertas Paper One A4</h5>
+                            <p class="card-text">
+                                Jenis Barang : Kertas HVS <br>
+                                Merk : Paper One<br>
+                                Ukuran : A4<br>
+                                Gramatur : 70 Gram<br>
+                                1 pak isi 500 lembar<br>
+                                <br>
+                                <b>Harga : Rp. 41.300</b>
+                            </p>
+                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 p-3 m-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="images/kertas/siduf4.jpg" class="card-img-top" alt="...">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card p-2" style="width: 18rem;">
+                        <img src="images/kertas/foliobergaris.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Folio Bergaris</h5>
+                            <p class="card-text">Harga per 1 Pack<br>
+                                1 Pack isi 100 Lembar<br>
+                                Merk: Sinar Dunia<br>
+                                Gramatur: 70 gram<br>
+                                Ukuran Kertas: 32 x 42 cm.<br>
+                                <br>
+                                <b>Harga : Rp. 21.300</b>
+                            </p>
+                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
