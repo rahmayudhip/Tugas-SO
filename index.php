@@ -46,15 +46,15 @@ session_start();
   <section id="wrapper_1">
     <div class="container1" style="display: inline-block">
       <img src="images\kertas.png" alt="Snow" style="width: 100%" />
-      <button class="btn"><a href="kertas.php">Kertas</a></button>
+      <a href="kertas.php"><button class="btn">Kertas</button></a>
     </div>
     <div class="container1" style="display: inline-block">
       <img src="images\penggaris.png" alt="Snow" style="width: 100%" />
-      <button class="btn">Alat Gambar</button>
+      <a href="alat_gambar.php"><button class="btn">Alat Gambar</button></a>
     </div>
     <div class="container1" style="display: inline-block">
       <img src="images\gunting.png" alt="Snow" style="width: 100%" />
-      <button class="btn">Alat Pemotong</button>
+      <a href="alat_pemotong.php"><button class="btn">Alat Pemotong</button></a>
     </div>
   </section>
   <br />

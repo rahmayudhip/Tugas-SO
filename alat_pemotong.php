@@ -30,21 +30,21 @@ session_start();
     <!-- Jumbotron Start-->
     <section class="jumbotron my-3">
         <div class="container">
-            <h1>Kertas Terbaik di MYATK</h1>
+            <h1>Alat Pemotong</h1>
             <div class="row mt-4">
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                        <img src="images/kertas/sidua4.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat pemotong/gunting.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Kertas Sidu A4</h5>
+                            <h5 class="card-title">Gunting Kertas </h5>
                             <p class="card-text">
-                                Jenis Barang : Kertas HVS <br>
-                                Merk : Sinar Dunia<br>
-                                Ukuran : A4<br>
-                                Gramatur : 70 Gram<br>
-                                1 pak isi 500 lembar<br>
+                                Jenis Barang : Gunting <br>
+                                Merk : Joyko<br>
+                                Ukuran : 210 x 80 mm<br>
+                                Gramatur : 100 Gram<br>
+                                1 buah<br>
                                 <br>
-                                <b>Harga : Rp. 40.000</b>
+                                <b>Harga : Rp. 15.000</b>
                             </p>
                             <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>
@@ -52,17 +52,17 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                        <img src="images/kertas/siduf4.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat pemotong/zigzag.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Kertas Sidu F4</h5>
+                            <h5 class="card-title">Gunting Zigzag/Gerigi</h5>
                             <p class="card-text">
-                                Jenis Barang : Kertas HVS <br>
-                                Merk : Sinar Dunia<br>
-                                Ukuran : F4<br>
-                                Gramatur : 70 Gram<br>
-                                1 pak isi 500 lembar<br>
+                                Jenis Barang : Gunting <br>
+                                Merk : Joyko<br>
+                                Ukuran : 155 x 62 mm<br>
+                                Gramatur : 100 Gram<br>
+                                1 buah<br>
                                 <br>
-                                <b>Harga : Rp. 45.000</b>
+                                <b>Harga : Rp. 10.000</b>
                             </p>
                             <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>
@@ -70,17 +70,17 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                        <img src="images/kertas/paperonea4.png" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat pemotong/cutter1.jpeg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Kertas Paper One A4</h5>
+                            <h5 class="card-title">Cutter Kecil CU-503</h5>
                             <p class="card-text">
-                                Jenis Barang : Kertas HVS <br>
-                                Merk : Paper One<br>
-                                Ukuran : A4<br>
-                                Gramatur : 70 Gram<br>
-                                1 pak isi 500 lembar<br>
+                                Jenis Barang : Cutter <br>
+                                Merk : Joyko<br>
+                                Ukuran : 175 x 12 mm<br>
+                                Gramatur : 28 Gram<br>
+                                1 buah<br>
                                 <br>
-                                <b>Harga : Rp. 41.300</b>
+                                <b>Harga : Rp. 4.900</b>
                             </p>
                             <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>
@@ -88,16 +88,16 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                        <img src="images/kertas/foliobergaris.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat pemotong/isiCutter.jpeg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Folio Bergaris</h5>
-                            <p class="card-text">Harga per 1 Pack<br>
-                                1 Pack isi 100 Lembar<br>
-                                Merk: Sinar Dunia<br>
-                                Gramatur: 70 gram<br>
-                                Ukuran Kertas: 32 x 42 cm.<br>
+                            <h5 class="card-title">Isi Cutter Kecil</h5>
+                            <p class="card-text">
+                                Merk: Deli<br>
+                                Gramatur: 30 gram<br>
+                                Ukuran Kertas: 13 x 1 cm.<br>
+                                1 Pack isi 5 buah<br>
                                 <br>
-                                <b>Harga : Rp. 21.300</b>
+                                <b>Harga : Rp. 5.000</b>
                             </p>
                             <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>

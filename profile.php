@@ -35,14 +35,15 @@ session_start();
   <br>
   <br>
   <?php
-  if (isset($_SESSION["Name"])) {
+  if (isset($_SESSION["Username"])) {
     $db = dbConnect();
-    $name = $db->escape_string($_SESSION["Name"]);
-    if ($dataPengguna = getDataPengguna($name)) {
+    $username = $db->escape_string($_SESSION["Username"]);
+    if ($dataPengguna = getDataPengguna($username)) {
 
   ?>
       <div class="container">
-        <form action="">
+        <form method="post" name="from" action="profile-update.php">
+          <input type="hidden" name="user_id" value="<?php echo $dataPengguna["user_id"]; ?>">
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label">Username</label>
             <div class="col-sm-10">
@@ -52,7 +53,7 @@ session_start();
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
-              <input type="text" name="name" class="form-control" value="<?php echo $dataPengguna["name"]; ?>">
+              <input type="text" name="name" id="name" class="form-control" value="<?php echo $dataPengguna["name"]; ?>">
             </div>
           </div>
           <div class="row mb-3">
@@ -93,12 +94,12 @@ session_start();
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
             <div class="col-sm-2">
-              <input type="text" name="birth_date" class="form-control" value="<?php echo $dataPengguna["birth_date"]; ?>">
+              <input type="text" name="birth_date" class="form-control" value="<?php echo $dataPengguna["birth_date"]; ?>" readonly>
             </div>
             <label class="col-sm-2 col-form-label" style="color: #A2A2A2;">DD/MM/YYYY</label>
           </div>
           <div class="d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary" style="background: #FF6B01;">Submit</button>
+            <button type="submit" name="TblUpdate" class="btn btn-primary" style="background: #FF6B01;">Save</button>
           </div>
         </form>
         <br>

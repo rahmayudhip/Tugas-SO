@@ -6,13 +6,13 @@ function dbConnect()
     return $db;
 }
 // getdataPengguna berdasarkan username
-function getDataPengguna($name)
+function getDataPengguna($username)
 {
     $db = dbConnect();
     if ($db->connect_errno == 0) {
         $res = $db->query("SELECT *
                             FROM user
-						    WHERE name='$name'");
+						    WHERE username='$username'");
         if ($res) {
             if ($res->num_rows > 0) {
                 $data = $res->fetch_assoc();

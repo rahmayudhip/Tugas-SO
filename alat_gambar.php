@@ -90,7 +90,7 @@ session_start();
                     <div class="card p-2" style="width: 18rem;">
                         <img src="images/alat gambar/mcpencil.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">Mechanical Pencil</h5>
+                            <h5 class="card-title">Mechanical Pencil</h5>
                             <p class="card-text">
                                 Jenis Barang : Pensil Mekanik <br>
                                 Merk : BIC <br>
@@ -109,7 +109,7 @@ session_start();
     </section>
     <section class="jumbotron my-3">
         <div class="container">
-            
+
             <div class="row mt-4">
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
@@ -133,7 +133,7 @@ session_start();
                     <div class="card p-2" style="width: 18rem;">
                         <img src="images/alat gambar/catposter.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">Cat Poster</h5>
+                            <h5 class="card-title">Cat Poster</h5>
                             <p class="card-text">
                                 Jenis Barang : Cat <br>
                                 Merk : Koi<br>
@@ -149,9 +149,9 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                    <img src="images/alat gambar/minyak.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat gambar/minyak.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">Cat Minyak</h5>
+                            <h5 class="card-title">Cat Minyak</h5>
                             <p class="card-text">
                                 Jenis Barang : Cat <br>
                                 Merk : Maries<br>
@@ -167,9 +167,9 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                    <img src="images/alat gambar/wpalette.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat gambar/wpalette.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">Palet cat</h5>
+                            <h5 class="card-title">Palet cat</h5>
                             <p class="card-text">
                                 Jenis Barang : Palet <br>
                                 Merk : Kiky<br>
@@ -188,7 +188,7 @@ session_start();
     </section>
     <section class="jumbotron my-3">
         <div class="container">
-            
+
             <div class="row mt-4">
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
@@ -210,7 +210,7 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                    <img src="images/alat gambar/kuaslukis.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat gambar/kuaslukis.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Kuas Lukis</h5>
                             <p class="card-text">
@@ -228,9 +228,9 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                    <img src="images/alat gambar/penggarisbesi.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat gambar/penggarisbesi.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">Penggaris Besi</h5>
+                            <h5 class="card-title">Penggaris Besi</h5>
                             <p class="card-text">
                                 Jenis Barang : Penggaris <br>
                                 Merk : Joyko<br>
@@ -246,9 +246,9 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                    <img src="images/alat gambar/penggarissegitiga.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat gambar/penggarissegitiga.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">Penggaris Segitiga</h5>
+                            <h5 class="card-title">Penggaris Segitiga</h5>
                             <p class="card-text">
                                 Jenis Barang : Penggaris <br>
                                 Merk : Kenko<br>
@@ -267,7 +267,7 @@ session_start();
     </section>
     <section class="jumbotron my-3">
         <div class="container">
-            
+
             <div class="row mt-4">
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
@@ -289,7 +289,7 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                    <img src="images/alat gambar/brushp.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat gambar/brushp.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Pen Brush</h5>
                             <p class="card-text">
@@ -307,9 +307,9 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                    <img src="images/alat gambar/koi.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat gambar/koi.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">WaterColor</h5>
+                            <h5 class="card-title">WaterColor</h5>
                             <p class="card-text">
                                 Jenis Barang : Cat Air <br>
                                 Merk : Koi<br>
@@ -325,9 +325,9 @@ session_start();
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="card p-2" style="width: 18rem;">
-                    <img src="images/alat gambar/crayon.jpg" class="card-img-top img-thumbnail" alt="...">
+                        <img src="images/alat gambar/crayon.jpg" class="card-img-top img-thumbnail" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">Crayon</h5>
+                            <h5 class="card-title">Crayon</h5>
                             <p class="card-text">
                                 Jenis Barang : kerayon <br>
                                 Merk : TiTi<br>
@@ -350,15 +350,15 @@ session_start();
     <section id="wrapper_1">
         <div class="container1" style="display: inline-block">
             <img src="images\kertas.png" alt="Snow" style="width: 100%" />
-            <button class="btn">Kertas</button>
+            <a href="kertas.php"><button class="btn">Kertas</button></a>
         </div>
         <div class="container1" style="display: inline-block">
             <img src="images\penggaris.png" alt="Snow" style="width: 100%" />
-            <button class="btn">Alat Gambar</button>
+            <a href="alat_gambar.php"><button class="btn">Alat Gambar</button></a>
         </div>
         <div class="container1" style="display: inline-block">
             <img src="images\gunting.png" alt="Snow" style="width: 100%" />
-            <button class="btn">Alat Pemotong</button>
+            <a href="alat_pemotong.php"><button class="btn">Alat Pemotong</button></a>
         </div>
     </section>
     <br />
