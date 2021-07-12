@@ -18,6 +18,12 @@ session_start();
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,800&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,48 +35,55 @@ session_start();
       Home / Cart
     </div>
   </div>
-  <div class="mb-5 d-flex justify-content-sm-evenly">
-    <div>Shopping Cart</div>
-    <div>Checkout</div>
+  <div class="d-flex justify-content-center mb-5">
+    <p class="fs-4 fw-bold text-decoration-none px-5" style="border-radius: 0px !important; border-bottom : 5px solid black;">Shopping Cart</p>
+    <p class="fs-4 fw-bold text-decoration-none px-5" style="border-radius: 0px !important;">Checkout</p>
   </div>
 
-  <!-- Cart Table -->
+  </ <!-- Cart Table -->
   <div class="container">
     <form action="cekout.php">
       <table class="table align-middle">
         <thead class="text-center">
           <tr>
-            <th scope="col" colspan="3">Product</th>
+            <th scope="col" colspan="2">Image</th>
+            <th scope="col">Product</th>
             <th scope="col">Price</th>
             <th scope="col">Quantity</th>
             <th scope="col">Total</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="text-center">
-            <td><button type="button" class="btn-close" aria-label="Close"></button></td>
-            <td><img src="images\watercolour.png" alt="watercolour" class="rounded" style="width: 150px" /></td>
-            <td>Winsor & Newton Cotman Watercolours</td>
-            <td>Rp 173.200</td>
-            <td>1</td>
-            <td>Rp 173.200</td>
-          </tr>
-          <tr class="text-center">
-            <td><button type="button" class="btn-close" aria-label="Close"></button></td>
-            <td><img src="images\drawingpen.png" alt="watercolour" class="rounded" style="width: 150px" /></td>
-            <td>Drawing Pen/Set</td>
-            <td>Rp 22.800</td>
-            <td>2</td>
-            <td>Rp 45.600</td>
-          </tr>
+          <?php
+          $db = dbConnect();
+          $sql = "SELECT `b`.`foto`, `b`.`nama_barang`, `b`.`harga`, `c`.`qty` FROM cart c JOIN barang b ON `b`.`id_barang` = `c`.`cart_id_barang` WHERE c.`cart_user_id` = {$_SESSION["UserID"]}";
+          //  WHERE c.`cart_user_id` = $_SESSION["UserID"]"
+          // JOIN pembeli p
+          $result = $db->query($sql);
+          $rows = $result->fetch_all(MYSQLI_ASSOC);
+          // var_dump($rows);
+          $total = 0;
+
+          foreach ($rows as $rowsData) :
+          ?>
+            <tr class="text-center">
+              <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+              <td><img src="<?= $rowsData["foto"] ?>" class="rounded" style="width: 150px" /></td>
+              <td><?= $rowsData["nama_barang"] ?></td>
+              <td><?= getRupiah($rowsData["harga"]) ?></td>
+              <td><?= $rowsData["qty"] ?></td>
+              <td><?= getRupiah($rowsData["harga"] * $rowsData["qty"]) ?></td>
+            </tr>
+            <?php $total = $total + ($rowsData["harga"] * $rowsData["qty"]); ?>
+          <?php endforeach; ?>
         </tbody>
       </table>
       <div class="p-3 mb-5 d-flex justify-content-sm-end">
-        <div class="col-2">
+        <div class="col-1">
           Total
         </div>
-        <div class="col-1">
-          Rp 218.600
+        <div class="col-2 fw-bold">
+          <?= getRupiah($total); ?>
         </div>
       </div>
       <div class="d-flex justify-content-end d-grid gap-2">

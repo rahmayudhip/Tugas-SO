@@ -22,6 +22,7 @@ session_start();
     <link href="vendor/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
 
     <title>MyATK | Stationary Store</title>
+
 </head>
 
 <body>
@@ -32,101 +33,49 @@ session_start();
         <div class="container">
             <h1>Kertas Terbaik di MYATK</h1>
             <div class="row mt-4">
-                <div class="col-sm-6 col-md-3">
-                    <div class="card p-2" style="width: 18rem;">
-                        <img src="images/kertas/sidua4.jpg" class="card-img-top img-thumbnail" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Kertas Sidu A4</h5>
-                            <p class="card-text">
-                                Jenis Barang : Kertas HVS <br>
-                                Merk : Sinar Dunia<br>
-                                Ukuran : A4<br>
-                                Gramatur : 70 Gram<br>
-                                1 pak isi 500 lembar<br>
-                                <br>
-                                <b>Harga : Rp. 40.000</b>
-                            </p>
-                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
+                <?php
+                $db = dbConnect();
+                $sql = "SELECT * FROM barang WHERE kode_jenis_barang = 'KE2'";
+                $result = $db->query($sql);
+                $rows = $result->fetch_all(MYSQLI_ASSOC);
+
+                foreach ($rows as $rowsData) :
+                ?>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card p-1 text-center" style="width: 18rem;">
+                            <img src="<?= $rowsData["foto"]; ?>" class="card-img-top img-thumbnail" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $rowsData["nama_barang"]; ?></h5>
+                                <p class="card-text">
+                                    <?= $rowsData["keterangan"]; ?>
+                                    <b>Harga : <?= getRupiah($rowsData["harga"]); ?></b><br>
+                                    <b><?= getStok($rowsData["stok"]); ?></b><br>
+                                    <br>
+                                    <b><?= getTerjual($rowsData["terjual"]); ?></b><br>
+                                    <?php getRating($rowsData["rating"]); ?>
+                                    <?= "{$rowsData["rating"]}" ?>
+                                </p>
+                                <?php
+                                if (($rowsData["stok"]) != 0 && (isset($_SESSION["UserID"]))) : ?>
+                                    <form action="proses-cart.php" method="POST">
+                                        <input name="barang_id" type="text" value="<?= $rowsData["id_barang"]; ?>" hidden>
+                                        <input name="calon_pembeli" type="text" value="<?= $_SESSION["UserID"]; ?>" hidden>
+                                        <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></button>
+                                    </form>
+                                <?php else : ?>
+                                    <button class="btn btn-danger" disabled><i class="fas fa-shopping-cart"></i></button>
+                                <?php endif; ?>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="card p-2" style="width: 18rem;">
-                        <img src="images/kertas/siduf4.jpg" class="card-img-top img-thumbnail" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Kertas Sidu F4</h5>
-                            <p class="card-text">
-                                Jenis Barang : Kertas HVS <br>
-                                Merk : Sinar Dunia<br>
-                                Ukuran : F4<br>
-                                Gramatur : 70 Gram<br>
-                                1 pak isi 500 lembar<br>
-                                <br>
-                                <b>Harga : Rp. 45.000</b>
-                            </p>
-                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="card p-2" style="width: 18rem;">
-                        <img src="images/kertas/paperonea4.png" class="card-img-top img-thumbnail" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Kertas Paper One A4</h5>
-                            <p class="card-text">
-                                Jenis Barang : Kertas HVS <br>
-                                Merk : Paper One<br>
-                                Ukuran : A4<br>
-                                Gramatur : 70 Gram<br>
-                                1 pak isi 500 lembar<br>
-                                <br>
-                                <b>Harga : Rp. 41.300</b>
-                            </p>
-                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="card p-2" style="width: 18rem;">
-                        <img src="images/kertas/foliobergaris.jpg" class="card-img-top img-thumbnail" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Folio Bergaris</h5>
-                            <p class="card-text">Harga per 1 Pack<br>
-                                1 Pack isi 100 Lembar<br>
-                                Merk: Sinar Dunia<br>
-                                Gramatur: 70 gram<br>
-                                Ukuran Kertas: 32 x 42 cm.<br>
-                                <br>
-                                <b>Harga : Rp. 21.300</b>
-                            </p>
-                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                </div>
+
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
     <!-- Jumbotron End-->
-
-    <!--Card Start-->
-    <section id="wrapper_1">
-        <div class="container1" style="display: inline-block">
-            <img src="images\kertas.png" alt="Snow" style="width: 100%" />
-            <a href="kertas.php"><button class="btn">Kertas</button></a>
-        </div>
-        <div class="container1" style="display: inline-block">
-            <img src="images\penggaris.png" alt="Snow" style="width: 100%" />
-            <a href="alat_gambar.php"><button class="btn">Alat Gambar</button></a>
-        </div>
-        <div class="container1" style="display: inline-block">
-            <img src="images\gunting.png" alt="Snow" style="width: 100%" />
-            <a href="alat_pemotong.php"><button class="btn">Alat Pemotong</button></a>
-        </div>
-    </section>
-    <br />
-    <br />
-
-    <!--Card Ends-->
 
     <!--Footer Start-->
     <section class="news py-5">

@@ -20,13 +20,6 @@ session_start();
 
   <title>Checkout</title>
 
-  <!-- Mengubah Font Halaman Check Out -->
-  <style>
-    body {
-      font-family: 'Rubik', sans-serif;
-    }
-  </style>
-
 </head>
 
 <body>
@@ -50,8 +43,8 @@ session_start();
 
   <section style="padding: 60px 0;">
     <div class="d-flex justify-content-center">
-      <a href="" class="btn btn-link fs-4 fw-bold text-decoration-none px-5" style="border-radius: 0px !important;">Shopping Cart</a>
-      <a href="" class="btn btn-link active fs-4 fw-bold text-decoration-none px-5" style="border-radius: 0px !important;">Checkout</a>
+      <p class="fs-4 fw-bold text-decoration-none px-5" style="border-radius: 0px !important;">Shopping Cart</p>
+      <p class="fs-4 fw-bold text-decoration-none px-5" style="border-radius: 0px !important; border-bottom : 5px solid black;">Checkout</p>
     </div>
     <div class="py-5">
       <!-- Menunggu Pembayaran -->

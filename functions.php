@@ -100,3 +100,45 @@ function navbar()
     </html>
 <?php
 }
+
+function getTerjual($sold)
+{
+    echo "<span style='color: lightgreen;'>Terjual : $sold kali</span>";
+}
+function getStok($stok)
+{
+    echo "<span style='color: red;'>Stok : $stok tersisa</span>";
+}
+
+function getRupiah($angka)
+{
+    $hasil_rupiah = "Rp " . number_format($angka, 2, ',', '.');
+    return $hasil_rupiah;
+}
+
+function getRating($star)
+{
+    if ($star >= 5) {
+        echo '<span style="color: #ffeb3b;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>';
+    } else if ($star >= 4.5) {
+        echo '<span style="color: #ffeb3b;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>';
+    } else if ($star >= 4) {
+        echo '<span style="color: #ffeb3b;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>';
+    } else if ($star >= 3.5) {
+        echo '<span style="color: #ffeb3b;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>';
+    } else if ($star >= 3) {
+        echo '<span style="color: #ffeb3b;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>';
+    } else if ($star >= 2.5) {
+        echo '<span style="color: #ffeb3b;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>';
+    } else if ($star >= 2) {
+        echo '<span style="color: #ffeb3b;"><i class="fas fa-star"></i><i class="fas fa-star"></i></span>';
+    } else if ($star >= 1.5) {
+        echo '<span style="color: #ffeb3b;"><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>';
+    } else if ($star >= 1) {
+        echo '<span style="color: #ffeb3b;"><i class="fas fa-star"></i></span>';
+    } else if ($star >= 0.5) {
+        echo '<span style="color: #ffeb3b;"><i class="fas fa-star-half-alt"></i></span>';
+    } else {
+        echo '<span style="color: #ffeb3b;"><i class="far fa-star"></i></span>';
+    }
+}
