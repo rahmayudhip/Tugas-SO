@@ -31,6 +31,7 @@ if (isset($_POST["barang_id"]) && isset($_POST["calon_pembeli"])) {
         if ($stok > $qty) {
             $db->query("UPDATE `cart` SET `qty` = $qty WHERE `cart`.`id_cart` = 1");
         }
+        header("location: cart.php?error=1");
     }
     // jika belom
     else {
