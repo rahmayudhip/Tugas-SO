@@ -48,7 +48,7 @@ session_start();
           <?php
           if (isset($_GET['error'])) {
             if ($_GET['error'] == "1") {
-              echo "<div class='alert alert-danger' role='alert'>Error!, Stok barang sudah penuh</div>";
+              echo "<div class='alert alert-danger' role='alert'>Error!, Stok barang tidak bisa ditambahkan lagi (terbatas)</div>";
             }
           } else if (isset($_GET['success'])) {
             if ($_GET['success'] == "1") {
