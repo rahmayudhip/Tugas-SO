@@ -40,6 +40,22 @@ session_start();
     <p class="fs-4 fw-bold text-decoration-none px-5" style="border-radius: 0px !important;">Checkout</p>
   </div>
 
+  <!-- Error Messages -->
+  <div class="card" style="width:450px;">
+                <?php
+                if (isset($_GET['error'])) {
+                  if ($_GET['error'] == "1") {
+                    echo "<div class='alert alert-danger' role='alert'>
+                                    Error!, Stok barang sudah penuh
+                                  </div>";
+                  } else {
+                    echo "<div class='alert alert-danger' role='alert'>
+                                    Error!, Mungkin terjadi kesalahan pada function Error
+                                  </div>";
+                  }
+                }
+                ?>
+  </div>
   </ <!-- Cart Table -->
   <div class="container">
     <form action="cekout.php">
