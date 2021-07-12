@@ -41,20 +41,26 @@ session_start();
   </div>
 
   <!-- Error Messages -->
-  <div class="card" style="width:450px;">
-                <?php
-                if (isset($_GET['error'])) {
-                  if ($_GET['error'] == "1") {
-                    echo "<div class='alert alert-danger' role='alert'>
-                                    Error!, Stok barang sudah penuh
-                                  </div>";
-                  } else {
-                    echo "<div class='alert alert-danger' role='alert'>
-                                    Error!, Mungkin terjadi kesalahan pada function Error
-                                  </div>";
-                  }
-                }
-                ?>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <div class="card">
+          <?php
+          if (isset($_GET['error'])) {
+            if ($_GET['error'] == "1") {
+              echo "<div class='alert alert-danger' role='alert'>Error!, Stok barang tidak bisa ditambahkan lagi (terbatas)</div>";
+            }
+          } else if (isset($_GET['success'])) {
+            if ($_GET['success'] == "1") {
+              echo "<div class='alert alert-success' role='alert'>Quantitas berhasil ditambahkan</div>";
+            } else if ($_GET['success'] == "2") {
+              echo "<div class='alert alert-success' role='alert'>Barang berhasil disimpan ke keranjang</div>";
+            }
+          }
+          ?>
+        </div>
+      </div>
+    </div>
   </div>
   </ <!-- Cart Table -->
   <div class="container">
