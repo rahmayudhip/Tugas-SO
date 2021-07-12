@@ -28,17 +28,19 @@ if (isset($_POST["barang_id"]) && isset($_POST["calon_pembeli"])) {
     if ($resCart) {
         ++$qty;
         // jika stok masih ada
-        if ($stok > $qty) {
-            $db->query("UPDATE `cart` SET `qty` = $qty WHERE `cart`.`id_cart` = 1");
+        if ($stok >= $qty) {
+            $db->query("UPDATE `cart` SET `qty` = $qty WHERE `cart`.`cart_id_barang` = $barang");
+            header("location: cart.php?success=1");
+        } else {
+            header("location: cart.php?error=1");
         }
-        header("location: cart.php?error=1");
     }
     // jika belom
     else {
         $sql = "INSERT INTO `cart` (`id_cart`, `cart_id_barang`, `cart_user_id`, `qty`) VALUES (NULL, '$barang', '$pembeli', '1')";
         $res = $db->query($sql);
         var_dump($res);
+        header("location: cart.php?success=2");
     }
-    header("location: cart.php");
 }
 ?>
