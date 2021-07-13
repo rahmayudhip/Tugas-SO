@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,800&display=swap" rel="stylesheet" />
 
   <title>Kategori</title>
@@ -101,23 +102,21 @@
 
 <!--Footer Start-->
 <section class="news py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-9 me-auto text-left">
-        <h1>Touch with us</h1>
-        <input type="text" placeholder="Enter Your Email" />
-        <button class="btn3">Submit</button>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-        </svg>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-11"></div>
-      <div class="row"></div>
-    </div>
-  </div>
-</section>
-<!--Footer end-->
+  <footer>
+        <div class="footer-content">
+            <h3>Find Us </h3>
+            <p>You can find out more about us by choosing our social media below </p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+            <p>copyright &copy;2021 </p>
+            <br>
+        
+    </footer>
+  </section>
+  <!--Footer end-->
 
 </html>
