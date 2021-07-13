@@ -65,19 +65,19 @@ session_start();
 
   <!--Footer Start-->
   <section class="news py-5">
-  <footer>
-        <div class="footer-content">
-            <h3>Find Us </h3>
-            <p>You can find out more about us by choosing our social media below </p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-            <p>copyright &copy;2021 </p>
-            <br>
-        
+    <footer>
+      <div class="footer-content">
+        <h3>Find Us </h3>
+        <p>You can find out more about us by choosing our social media below </p>
+        <ul class="socials">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+        <p>copyright &copy;2021 </p>
+        <br>
+
     </footer>
   </section>
   <!--Footer end-->

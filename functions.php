@@ -101,6 +101,25 @@ function navbar()
 <?php
 }
 
+function getDataBarang($id_barang)
+{
+    $db = dbConnect();
+    if ($db->connect_errno == 0) {
+        $res = $db->query("SELECT * FROM `barang` `b` INNER JOIN `jenis_barang` `jb` ON `b`.`kode_jenis_barang` = `jb`.`kode_jenis_barang`
+						    WHERE b.id_barang='$id_barang'");
+        if ($res) {
+            if ($res->num_rows > 0) {
+                $data = $res->fetch_assoc();
+                $res->free();
+                return $data;
+            } else
+                return FALSE;
+        } else
+            return FALSE;
+    } else
+        return FALSE;
+}
+
 function getTerjual($sold)
 {
     echo "<span style='color: lightgreen;'>Terjual : $sold kali</span>";
@@ -141,4 +160,15 @@ function getRating($star)
     } else {
         echo '<span style="color: #ffeb3b;"><i class="far fa-star"></i></span>';
     }
+}
+
+function upload()
+{
+    $namaFile = $_FILES['foto']['name'];
+    $tmpName = $_FILES['foto']['tmp_name'];
+
+    // move gambar ke direktori
+    move_uploaded_file($tmpName, '../' . 'images/' . 'Gambar/' . $namaFile);
+
+    return $namaFile;
 }
