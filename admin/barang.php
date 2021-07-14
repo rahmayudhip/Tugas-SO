@@ -1,6 +1,44 @@
 <?php include('template/header.php'); ?>
 
 <title>MyATK | Halaman Barang</title>
+<script>
+    function validasiData() {
+        // validasi nama_barang
+        var nama_barang = document.form.nama_barang.value.trim();
+        if (nama_barang.length == 0) {
+            alert('Nama barang belum diisi.');
+            document.form.nama_barang.focus();
+            return false;
+        }
+        // validasi jenis barang
+        if (document.form.kode_jenis_barang.selectedIndex == 0) {
+            alert("Jenis barang belum dipilih.");
+            document.form.kode_jenis_barang.focus();
+            return false;
+        }
+        // validasi stok
+        var stok = document.form.stok.value.trim();
+        if (stok.length == 0) {
+            alert('Stok belum diisi.');
+            document.form.stok.focus();
+            return false;
+        }
+        // validasi harga
+        var harga = document.form.harga.value.trim();
+        if (harga.length == 0) {
+            alert('Harga belum diisi.');
+            document.form.harga.focus();
+            return false;
+        }
+        // validasi keterangan
+        var keterangan = document.form.keterangan.value.trim();
+        if (keterangan.length == 0) {
+            alert('Keterangan belum diisi.');
+            document.form.keterangan.focus();
+            return false;
+        }
+    }
+</script>
 </head>
 
 <body>
@@ -30,7 +68,7 @@
                                         <h5 class="modal-title" id="barang-tambah">Tambah Barang Baru</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <form method="post" name="form" enctype="multipart/form-data" action="barang-simpan.php">
+                                    <form method="post" name="form" enctype="multipart/form-data" action="barang-simpan.php" onsubmit="return validasiData()">
                                         <div class="modal-body">
                                             <div class="">
                                                 <div class="input-group mb-3">

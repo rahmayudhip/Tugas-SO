@@ -15,6 +15,44 @@ include_once("../functions.php");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>Edit barang</title>
+    <script>
+        function validasiData() {
+            // validasi nama_barang
+            var nama_barang = document.form.nama_barang.value.trim();
+            if (nama_barang.length == 0) {
+                alert('Nama barang belum diisi.');
+                document.form.nama_barang.focus();
+                return false;
+            }
+            // validasi jenis barang
+            if (document.form.kode_jenis_barang.selectedIndex == 0) {
+                alert("Jenis barang belum dipilih.");
+                document.form.kode_jenis_barang.focus();
+                return false;
+            }
+            // validasi stok
+            var stok = document.form.stok.value.trim();
+            if (stok.length == 0) {
+                alert('Stok belum diisi.');
+                document.form.stok.focus();
+                return false;
+            }
+            // validasi harga
+            var harga = document.form.harga.value.trim();
+            if (harga.length == 0) {
+                alert('Harga belum diisi.');
+                document.form.harga.focus();
+                return false;
+            }
+            // validasi keterangan
+            var keterangan = document.form.keterangan.value.trim();
+            if (keterangan.length == 0) {
+                alert('Keterangan belum diisi.');
+                document.form.keterangan.focus();
+                return false;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -41,7 +79,7 @@ include_once("../functions.php");
                                 //
                                 if ($dataBarang = getDataBarang($id_barang)) {
                             ?>
-                                    <form method="post" name="form" action="barang-update.php">
+                                    <form method="post" name="form" action="barang-update.php" onsubmit="return validasiData()">
                                         <div class="modal-body">
                                             <div class="">
                                                 <input type="hidden" name="id_barang" value="<?php echo $dataBarang["id_barang"]; ?>">
