@@ -81,7 +81,7 @@ include_once("../functions.php");
 
                                                 <div class="input-group">
                                                     <span class="input-group-text"><i class="fas fa-sticky-note fa-fw"></i></span>
-                                                    <textarea class="form-control" aria-label="With textarea" rows="5" name="keterangan">value="<?php echo $dataBarang["keterangan"]; ?>"</textarea>
+                                                    <textarea class="form-control" aria-label="With textarea" rows="5" name="keterangan"><?php echo $dataBarang["keterangan"]; ?></textarea>
                                                 </div>
                                             </div>
                                         </div>
