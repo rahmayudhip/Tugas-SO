@@ -41,9 +41,7 @@ session_start();
                             $user_id = $db->escape_string($_POST["user_id"]);
                             $password    = $db->escape_string($_POST["password"]);
                             // query update data
-                            $sql = "UPDATE user SET
-                    password    = md5('$password'),
-                    WHERE user_id ='$user_id'";
+                            $sql = "UPDATE `user` SET `password` = md5('$password') WHERE `user`.`user_id` = $user_id;";
                             // eksekusi query update
                             $res = $db->query($sql);
                             if ($res) {

@@ -51,7 +51,7 @@ session_start();
               <input type="password" name="password" id="password" placeholder="Masukkan Password Baru" class="form-control" style="width:300px;">
             </div>
           </div>
-               <div class="row mb-3">
+          <div class="row mb-3">
             <label class="col-sm-2 col-form-label">Ulangi Password</label>
             <div class="col-sm-2">
               <input type="password" placeholder="Ulangi Password" class="form-control" style="width:300px;">
@@ -71,24 +71,24 @@ session_start();
   } else echo "b";
     ?>
       </div>
-     <!--Footer Start-->
-  <section class="news py-5">
-  <footer>
-        <div class="footer-content">
+      <!--Footer Start-->
+      <section class="news py-5">
+        <footer>
+          <div class="footer-content">
             <h3>Find Us </h3>
             <p>You can find out more about us by choosing our social media below </p>
             <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
             </ul>
             <p>copyright &copy;2021 </p>
             <br>
-        
-    </footer>
-  </section>
-  <!--Footer end-->
+
+        </footer>
+      </section>
+      <!--Footer end-->
 </body>
 
 </html>
