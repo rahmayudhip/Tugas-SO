@@ -22,8 +22,11 @@ $totalHarga = $totalHarga + ($random);
 
 // insert to transaksi
 $calonID = createId('transaksi', 'id_transaksi', 'tr-');
-$insertTransaksi = "INSERT INTO `transaksi` VALUES ('$calonID','$pembelian',$totalHarga,NULL,NULL)";
+$insertTransaksi = "INSERT INTO `transaksi` VALUES ('$calonID','$pembelian',$totalHarga,NULL,NULL, {$_SESSION["UserID"]})";
+// var_dump($db->query($insertTransaksi);
+
 $db->query($insertTransaksi);
+// die;
 
 // insert to detail transaksi
 for ($i = 0; $i < count($barangArr); $i++) {
