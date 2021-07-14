@@ -100,6 +100,7 @@ session_start();
             <label class="col-sm-2 col-form-label" style="color: #A2A2A2;">DD/MM/YYYY</label>
           </div>
           <div class="d-flex justify-content-end">
+            <a href="profile-ubah-password.php" class="btn btn-primary" style="background: #FF6B01;">Ubah Password</a>&nbsp;
             <button type="submit" name="TblUpdate" class="btn btn-primary" style="background: #FF6B01;">Save</button>
           </div>
         </form>

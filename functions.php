@@ -165,7 +165,7 @@ function getRating($star)
 function upload()
 {
     $namaFile = $_FILES['foto']['name'];
-    $tmpName = $_FILES['foto']['tmp_name'];
+    $tmpName  = $_FILES['foto']['tmp_name'];
 
     // move gambar ke direktori
     move_uploaded_file($tmpName, '../' . 'images/' . 'Gambar/' . $namaFile);

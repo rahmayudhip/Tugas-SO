@@ -47,7 +47,17 @@ include_once("../functions.php");
                                     $harga              = $db->escape_string($_POST["harga"]);
                                     // upload foto
                                     $foto               = upload();
-                                    $keterangan         = $db->escape_string($_POST["keterangan"]);
+                                    // validasi foto
+                                    if (!$foto) {
+                                        echo "<script>
+                                            alert('Foto belum dipilih.');
+                                            window.location = 'javascript:history.back()';
+                                            </script>";
+
+                                        return false;
+                                    }
+                                    $ket                = nl2br($_REQUEST['keterangan']);
+                                    $keterangan         = $db->escape_string($ket);
                                     // query update data
                                     $sql = "INSERT INTO `barang` (`id_barang`, `nama_barang`, `kode_jenis_barang`, `harga`, `rating`, `foto`, `stok`, `terjual`, `keterangan`)
                                     VALUES (NULL, '$nama_barang', '$kode_jenis_barang', '$harga', '0', 'images/gambar/$foto', '$stok', '0', '$keterangan')";
