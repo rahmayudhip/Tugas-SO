@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .navbar-brand {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 2rem;
   color: black;
 }
@@ -19,11 +19,11 @@
 }
 .navbar-brand:hover {
   color: black;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .nav-link {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   margin-right: 10px;
   margin-left: 30px;
   color: black;
@@ -82,7 +82,7 @@
 h3.subtitle {
   font-size: 1rem;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 .second h2 {
   position: absolute;
@@ -96,7 +96,7 @@ h3.subtitle {
 }
 
 .ico:after {
-  content: '';
+  content: "";
   display: block;
   height: 40px; /*height of icon */
   width: 40px; /*width of icon */
@@ -118,7 +118,7 @@ h3.subtitle {
   outline: none;
   background-color: rgb(255, 255, 255);
   font-weight: 800;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   border-radius: 43px;
 }
 
@@ -137,7 +137,7 @@ h3.subtitle {
   -ms-transform: translate(-50%, -50%);
   background-color: rgb(255, 255, 255);
   color: rgb(69, 64, 156);
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 20px;
   font-weight: 700;
   padding: 12px 24px;
@@ -176,7 +176,7 @@ h3.subtitle {
   margin-left: -10px;
   border: none;
   border-radius: 10px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   color: rgb(255, 255, 255);
   margin-left: 20px;
 }
@@ -206,7 +206,7 @@ h3.subtitle {
 .cekot2 {
   font-size: 2rem;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 #wrapper_3 {
   left: 70px auto;
@@ -218,7 +218,7 @@ h3.subtitle {
 .soping {
   font-size: 2rem;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   margin-top: 60px;
   margin-bottom: 60px;
   letter-spacing: 3px;
@@ -226,7 +226,7 @@ h3.subtitle {
 .cekot {
   font-size: 2rem;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   margin-top: 60px;
   margin-bottom: 60px;
   letter-spacing: 3px;
@@ -252,7 +252,7 @@ footer {
   background: #f8e6aeb2;
   height: auto;
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   padding-top: 20px;
   color: rgb(0, 0, 0);
 }

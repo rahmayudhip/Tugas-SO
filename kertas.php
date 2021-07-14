@@ -78,24 +78,44 @@ session_start();
     </section>
     <!-- Jumbotron End-->
 
-   <!--Footer Start-->
-  <section class="news py-5">
-  <footer>
-        <div class="footer-content">
-            <h3>Find Us </h3>
-            <p>You can find out more about us by choosing our social media below </p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-            <p>copyright &copy;2021 </p>
-            <br>
-        
-    </footer>
-  </section>
-  <!--Footer end-->
+    <!--Card Start-->
+    <section id="wrapper_1">
+        <div class="container1" style="display: inline-block">
+            <img src="images\kertas.png" alt="Snow" style="width: 100%" />
+            <a href="kertas.php"><button class="btn">Kertas</button></a>
+        </div>
+        <div class="container1" style="display: inline-block">
+            <img src="images\penggaris.png" alt="Snow" style="width: 100%" />
+            <a href="alat_gambar.php"><button class="btn">Alat Gambar</button></a>
+        </div>
+        <div class="container1" style="display: inline-block">
+            <img src="images\gunting.png" alt="Snow" style="width: 100%" />
+            <a href="alat_pemotong.php"><button class="btn">Alat Pemotong</button></a>
+        </div>
+    </section>
+    <br />
+    <br />
+
+    <!--Card Ends-->
+
+    <!--Footer Start-->
+    <section class="news py-5">
+        <footer>
+            <div class="footer-content">
+                <h3>Find Us </h3>
+                <p>You can find out more about us by choosing our social media below </p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+                <p>copyright &copy;2021 </p>
+                <br>
+
+        </footer>
+    </section>
+    <!--Footer end-->
 
 </body>
 

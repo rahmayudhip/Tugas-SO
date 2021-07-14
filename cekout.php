@@ -25,21 +25,21 @@ $calonID = createId('transaksi', 'id_transaksi', 'tr-');
 $insertTransaksi = "INSERT INTO `transaksi` VALUES ('$calonID','$pembelian',$totalHarga,NULL,NULL)";
 $db->query($insertTransaksi);
 
-// // insert to detail transaksi
-// for ($i = 0; $i < count($barangArr); $i++) {
-//   $insertDetailTransaksi = "INSERT INTO `detail_transaksi` VALUES (NULL, '$calonID',$barangArr[$i],$qtyArr[$i])";
-//   // var_dump(($insertDetailTransaksi));
-//   ($db->query($insertDetailTransaksi));
+// insert to detail transaksi
+for ($i = 0; $i < count($barangArr); $i++) {
+  $insertDetailTransaksi = "INSERT INTO `detail_transaksi` VALUES (NULL, '$calonID',$barangArr[$i],$qtyArr[$i])";
+  // var_dump(($insertDetailTransaksi));
+  ($db->query($insertDetailTransaksi));
 
 
-//   $tersisa = $db->query("SELECT stok, terjual FROM barang WHERE id_barang = $barangArr[$i]")->fetch_assoc();
-//   $db->query("UPDATE `barang` SET `stok` = '" . ($tersisa['stok'] - $qtyArr[$i]) . "', `terjual` = '" . ($tersisa['terjual'] + $qtyArr[$i]) . "' WHERE `barang`.`id_barang` = {$barangArr[$i]}");
-// }
+  $tersisa = $db->query("SELECT stok, terjual FROM barang WHERE id_barang = $barangArr[$i]")->fetch_assoc();
+  $db->query("UPDATE `barang` SET `stok` = '" . ($tersisa['stok'] - $qtyArr[$i]) . "', `terjual` = '" . ($tersisa['terjual'] + $qtyArr[$i]) . "' WHERE `barang`.`id_barang` = {$barangArr[$i]}");
+}
 
 
-// for ($i = 0; $i < count($cartArr); $i++) {
-//   $db->query("DELETE FROM cart WHERE id_cart = {$cartArr[$i]}");
-// }
+for ($i = 0; $i < count($cartArr); $i++) {
+  $db->query("DELETE FROM cart WHERE id_cart = {$cartArr[$i]}");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

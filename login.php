@@ -14,6 +14,17 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,800&display=swap" rel="stylesheet" />
 
+  <style>
+    .tittle {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .tittle:hover {
+      color: #000;
+    }
+  </style>
+
   <title>MyATK | Stationary Store</title>
 </head>
 
@@ -26,7 +37,9 @@
             <img src="images/Secure login-pana.png" style="width:590px; height:590px;">
             <div style="float:right">
               <center>
-                <h1>MY ATK</h1>
+                <a href="index.php" class="tittle">
+                  <h1>MY ATK</h1>
+                </a>
                 <strong>YOUR HOME STATIONERY PARTNER</strong>
               </center>
               <br>
@@ -56,7 +69,7 @@
                     <input type="password" name="i_password" class="form-control" placeholder="Masukkan Password">
                     <hr>
                     <input type="submit" name="btn_login" class="btn btn-warning" value="Login">
-                    <a href="register.html" class="btn btn-warning">Daftar</a>
+                    <a href="register.php" class="btn btn-warning">Daftar</a>
                   </form>
                 </div>
               </div>
@@ -67,21 +80,21 @@
     </div>
   </section>
 
- <!--Footer Start-->
- <section class="news py-5">
-  <footer>
-        <div class="footer-content">
-            <h3>Find Us </h3>
-            <p>You can find out more about us by choosing our social media below </p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-            <p>copyright &copy;2021 </p>
-            <br>
-        
+  <!--Footer Start-->
+  <section class="news py-5">
+    <footer>
+      <div class="footer-content">
+        <h3>Find Us </h3>
+        <p>You can find out more about us by choosing our social media below </p>
+        <ul class="socials">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+        <p>copyright &copy;2021 </p>
+        <br>
+
     </footer>
   </section>
   <!--Footer end-->

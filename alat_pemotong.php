@@ -32,77 +32,45 @@ session_start();
         <div class="container">
             <h1>Alat Pemotong</h1>
             <div class="row mt-4">
-                <div class="col-sm-6 col-md-3">
-                    <div class="card p-2" style="width: 18rem;">
-                        <img src="images/alat pemotong/gunting.jpg" class="card-img-top img-thumbnail" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Gunting Kertas </h5>
-                            <p class="card-text">
-                                Jenis Barang : Gunting <br>
-                                Merk : Joyko<br>
-                                Ukuran : 210 x 80 mm<br>
-                                Gramatur : 100 Gram<br>
-                                1 buah<br>
-                                <br>
-                                <b>Harga : Rp. 15.000</b>
-                            </p>
-                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
+                <?php
+                $db = dbConnect();
+                $sql = "SELECT * FROM barang WHERE kode_jenis_barang = 'AP3'";
+                $result = $db->query($sql);
+                $rows = $result->fetch_all(MYSQLI_ASSOC);
+
+                foreach ($rows as $rowsData) :
+                ?>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card p-1 text-center" style="width: 18rem;">
+                            <img src="<?= $rowsData["foto"]; ?>" class="card-img-top img-thumbnail" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $rowsData["nama_barang"]; ?></h5>
+                                <p class="card-text">
+                                    <?= $rowsData["keterangan"]; ?><br><br>
+                                    <b>Harga : <?= getRupiah($rowsData["harga"]); ?></b><br>
+                                    <b><?= getStok($rowsData["stok"]); ?></b><br>
+                                    <br>
+                                    <b><?= getTerjual($rowsData["terjual"]); ?></b><br>
+                                    <?php getRating($rowsData["rating"]); ?>
+                                    <?= "{$rowsData["rating"]}" ?>
+                                </p>
+                                <?php
+                                if (($rowsData["stok"]) != 0 && (isset($_SESSION["UserID"]))) : ?>
+                                    <form action="proses-cart.php" method="POST">
+                                        <input name="barang_id" type="text" value="<?= $rowsData["id_barang"]; ?>" hidden>
+                                        <input name="calon_pembeli" type="text" value="<?= $_SESSION["UserID"]; ?>" hidden>
+                                        <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></button>
+                                    </form>
+                                <?php else : ?>
+                                    <button class="btn btn-danger" disabled><i class="fas fa-shopping-cart"></i></button>
+                                <?php endif; ?>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="card p-2" style="width: 18rem;">
-                        <img src="images/alat pemotong/zigzag.jpg" class="card-img-top img-thumbnail" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Gunting Zigzag/Gerigi</h5>
-                            <p class="card-text">
-                                Jenis Barang : Gunting <br>
-                                Merk : Joyko<br>
-                                Ukuran : 155 x 62 mm<br>
-                                Gramatur : 100 Gram<br>
-                                1 buah<br>
-                                <br>
-                                <b>Harga : Rp. 10.000</b>
-                            </p>
-                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="card p-2" style="width: 18rem;">
-                        <img src="images/alat pemotong/cutter1.jpeg" class="card-img-top img-thumbnail" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Cutter Kecil CU-503</h5>
-                            <p class="card-text">
-                                Jenis Barang : Cutter <br>
-                                Merk : Joyko<br>
-                                Ukuran : 175 x 12 mm<br>
-                                Gramatur : 28 Gram<br>
-                                1 buah<br>
-                                <br>
-                                <b>Harga : Rp. 4.900</b>
-                            </p>
-                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="card p-2" style="width: 18rem;">
-                        <img src="images/alat pemotong/isiCutter.jpeg" class="card-img-top img-thumbnail" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Isi Cutter Kecil</h5>
-                            <p class="card-text">
-                                Merk: Deli<br>
-                                Gramatur: 30 gram<br>
-                                Ukuran Kertas: 13 x 1 cm.<br>
-                                1 Pack isi 5 buah<br>
-                                <br>
-                                <b>Harga : Rp. 5.000</b>
-                            </p>
-                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                </div>
+
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -130,22 +98,20 @@ session_start();
 
     <!--Footer Start-->
     <section class="news py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 me-auto text-left">
-                    <h1>Touch with us</h1>
-                    <input type="text" placeholder="Enter Your Email" />
-                    <button class="btn3">Submit</button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                    </svg>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-11"></div>
-                <div class="row"></div>
-            </div>
-        </div>
+        <footer>
+            <div class="footer-content">
+                <h3>Find Us </h3>
+                <p>You can find out more about us by choosing our social media below </p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+                <p>copyright &copy;2021 </p>
+                <br>
+
+        </footer>
     </section>
     <!--Footer end-->
 

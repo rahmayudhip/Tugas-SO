@@ -54,7 +54,7 @@ function navbar()
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Shop</a>
+                            <a class="nav-link" href="shop.php">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.php">About</a>
@@ -75,6 +75,7 @@ function navbar()
                                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi, <?= $_SESSION["Name"] ?></a>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="profile.php">Profile</a>
+                                        <a class="dropdown-item" href="transaksi.php">Transaksi</a>
                                         <a class="dropdown-item" href="logout.php">Logout</a>
                                     </div>
                                 </li>

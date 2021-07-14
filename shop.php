@@ -23,6 +23,7 @@ session_start();
     <link href="vendor/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
 
     <title>MyATK | Stationary Store</title>
+
 </head>
 
 <body>
@@ -31,11 +32,11 @@ session_start();
     <!-- Jumbotron Start-->
     <section class="jumbotron my-3">
         <div class="container">
-            <h1>Alat Gambar Berkualitas</h1>
+            <h1>Shop</h1>
             <div class="row mt-4">
                 <?php
                 $db = dbConnect();
-                $sql = "SELECT * FROM barang WHERE kode_jenis_barang = 'AG1'";
+                $sql = "SELECT * FROM barang";
                 $result = $db->query($sql);
                 $rows = $result->fetch_all(MYSQLI_ASSOC);
 
@@ -78,6 +79,8 @@ session_start();
     <!-- Jumbotron End-->
 
     <!--Card Start-->
+    <br>
+    <hr>
     <section id="wrapper_1">
         <div class="container1" style="display: inline-block">
             <img src="images\kertas.png" alt="Snow" style="width: 100%" />
@@ -92,9 +95,6 @@ session_start();
             <a href="alat_pemotong.php"><button class="btn">Alat Pemotong</button></a>
         </div>
     </section>
-    <br />
-    <br />
-
     <!--Card Ends-->
 
     <!--Footer Start-->
