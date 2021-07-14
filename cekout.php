@@ -1,7 +1,45 @@
 <?php
 include_once('functions.php');
 session_start();
+$db = dbConnect();
 
+$random = (rand(100, 999));
+
+$cartArr = $_POST['id_cart'];
+$qtyArr = $_POST['qty'];
+$barangArr = $_POST['id_barang'];
+$hargaArr = $_POST['harga'];
+
+$totalHarga = 0;
+for ($i = 0; $i < count($_POST['id_barang']); $i++) {
+  $sql = $db->query("INSERT");
+  $totalHarga = $totalHarga + ($hargaArr[$i] * $qtyArr[$i]);
+}
+
+$pembelian = $_POST['pembelian'];
+
+$totalHarga = $totalHarga + ($random);
+
+// insert to transaksi
+$calonID = createId('transaksi', 'id_transaksi', 'tr-');
+$insertTransaksi = "INSERT INTO `transaksi` VALUES ('$calonID','$pembelian',$totalHarga,NULL,NULL)";
+$db->query($insertTransaksi);
+
+// // insert to detail transaksi
+// for ($i = 0; $i < count($barangArr); $i++) {
+//   $insertDetailTransaksi = "INSERT INTO `detail_transaksi` VALUES (NULL, '$calonID',$barangArr[$i],$qtyArr[$i])";
+//   // var_dump(($insertDetailTransaksi));
+//   ($db->query($insertDetailTransaksi));
+
+
+//   $tersisa = $db->query("SELECT stok, terjual FROM barang WHERE id_barang = $barangArr[$i]")->fetch_assoc();
+//   $db->query("UPDATE `barang` SET `stok` = '" . ($tersisa['stok'] - $qtyArr[$i]) . "', `terjual` = '" . ($tersisa['terjual'] + $qtyArr[$i]) . "' WHERE `barang`.`id_barang` = {$barangArr[$i]}");
+// }
+
+
+// for ($i = 0; $i < count($cartArr); $i++) {
+//   $db->query("DELETE FROM cart WHERE id_cart = {$cartArr[$i]}");
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +90,7 @@ session_start();
       <div class="py-3">
         <h2 class="fw-bold text-center">Menunggu Pembayaran</h2 class="fw-bold text-center">
         <div class="col-md-8 mx-auto">
-          <p class="text-center fs-4 mt-4 text-secondary">Mohon selesaikan Anda sebelum tanggal 09 Juni 2021 11:33 dengan rincian sebagai berikut.</p>
+          <p class="text-center fs-4 mt-4 text-secondary">Mohon selesaikan Anda sebelum tanggal <?= date('d-m-Y', strtotime($_POST['pembelian']) + 86400) ?> dengan rincian sebagai berikut.</p>
         </div>
       </div>
 
@@ -67,8 +105,8 @@ session_start();
           <div class="col-md-4 text-center">
             <p class="fs-4">Transfer ke Rekening</p>
             <p class="fs-4 fw-bold">5030124 BNI a/n Muhammad Faishal</p>
-            <p class="fs-4 fw-bold">Kode Unik : 617</p>
-            <p class="fs-4 fw-bold">Total yang harus dibayarkan Rp. 218,617</p>
+            <p class="fs-4 fw-bold">Kode Unik : <?= $random ?></p>
+            <p class="fs-4 fw-bold">Total yang harus dibayarkan <br> <?= getRupiah($totalHarga, 0); ?></p>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -94,21 +132,21 @@ session_start();
 
   <!--Icon End-->
 
- <!--Footer Start-->
- <section class="news py-5">
-  <footer>
-        <div class="footer-content">
-            <h3>Find Us </h3>
-            <p>You can find out more about us by choosing our social media below </p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-            <p>copyright &copy;2021 </p>
-            <br>
-        
+  <!--Footer Start-->
+  <section class="news py-5">
+    <footer>
+      <div class="footer-content">
+        <h3>Find Us </h3>
+        <p>You can find out more about us by choosing our social media below </p>
+        <ul class="socials">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+        <p>copyright &copy;2021 </p>
+        <br>
+
     </footer>
   </section>
   <!--Footer end-->

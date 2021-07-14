@@ -129,9 +129,9 @@ function getStok($stok)
     echo "<span style='color: red;'>Stok : $stok tersisa</span>";
 }
 
-function getRupiah($angka)
+function getRupiah($angka, $belakangkoma = 2)
 {
-    $hasil_rupiah = "Rp " . number_format($angka, 2, ',', '.');
+    $hasil_rupiah = "Rp " . number_format($angka, $belakangkoma, ',', '.');
     return $hasil_rupiah;
 }
 
@@ -171,4 +171,21 @@ function upload()
     move_uploaded_file($tmpName, '../' . 'images/' . 'Gambar/' . $namaFile);
 
     return $namaFile;
+}
+
+function createId($table, $field, $leter)
+{
+    $db = dbConnect();
+    $query  = $db->query("SELECT MAX($field) AS id FROM $table");
+    $data   = $query->fetch_array();
+    $id     = $data["id"];
+
+    $order = (int) substr($id, 3, 3);
+
+    $order++;
+
+    $alphabet = $leter;
+    $id = $alphabet . sprintf("%03s", $order);
+
+    return $id;
 }
