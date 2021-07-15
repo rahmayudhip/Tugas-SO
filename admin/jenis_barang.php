@@ -29,22 +29,24 @@
                                         <h5 class="modal-title" id="barang-tambah">Tambah Jenis Barang Baru</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text"><i class="fas fa-cube fa-fw"></i></span>
-                                                <input type="text" name="jenisbarang-kode" class="form-control" placeholder="Kode Barang" aria-label="jenisbarang-kode" aria-describedby="basic-addon1">
-                                            </div>
+                                    <form method="post" name="form" action="jenis-barang-simpan.php">
+                                        <div class="modal-body">
+                                            <div class="">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i class="fas fa-cube fa-fw"></i></span>
+                                                    <input type="text" name="kode_jenis_barang" class="form-control" placeholder="Kode Barang" aria-label="jenisbarang-kode" aria-describedby="basic-addon1">
+                                                </div>
 
-                                            <div class="input-group mb-3">
-                                                <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-cubes fa-fw"></i></label>
-                                                <input type="text" name="jenisbarang-nama" class="form-control" placeholder="Nama Jenis Barang" aria-label="namaJenisBarang" aria-describedby="basic-addon1">
+                                                <div class="input-group mb-3">
+                                                    <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-cubes fa-fw"></i></label>
+                                                    <input type="text" name="nama_jenis_barang" class="form-control" placeholder="Nama Jenis Barang" aria-label="namaJenisBarang" aria-describedby="basic-addon1">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary">Submit Barang</button>
-                                    </div>
+                                        <div class="modal-footer">
+                                            <button type="Submit" name="TblSimpan" class="btn btn-primary">Submit Jenis Barang</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +76,7 @@
                                             <td><?= $rowsData["nama_jenis_barang"]; ?></td>
                                             <td>
                                                 <div class="d-flex flex-row justify-content-center">
-                                                    <a href="#" class="btn btn-outline-info btn-sm m-1"><i class="fas fa-clipboard-list fa-sm fa-fw"></i></a>
+                                                    <a href="jenis-barang-hapus.php?kode_jenis_barang=<?php echo $rowsData["kode_jenis_barang"]; ?>" onclick="return confirm('anda yakin ingin menghapus?')" class="btn btn-outline-danger btn-sm m-1"><i class="fas fa-trash-alt fa-sm fa-fw"></i></a>
                                                     <!-- <a class="btn btn-outline-warning btn-sm m-1"><i class="fas fa-pencil-alt fa-sm fa-fw"></i></a>
                           <a class="btn btn-outline-danger btn-sm m-1"><i class="fas fa-trash-alt fa-sm fa-fw"></i></a> -->
                                                 </div>
