@@ -38,7 +38,7 @@
 
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-cubes fa-fw"></i></label>
-                                                <input type="text" name="jenisbarang-nama" class="form-control" placeholder="Nama Jenis Barang aria-label=" Username" aria-describedby="basic-addon1">
+                                                <input type="text" name="jenisbarang-nama" class="form-control" placeholder="Nama Jenis Barang" aria-label="namaJenisBarang" aria-describedby="basic-addon1">
                                             </div>
                                         </div>
                                     </div>

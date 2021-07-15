@@ -103,31 +103,32 @@ include_once("../functions.php");
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text">Id Barang</span>
-                                                    <input type="text" name="id_detail_transaksi" class="form-control" aria-describedby="basic-addon1" value="<?php echo $rowsData["id_detail_barang"]; ?>">
+                                                    <input type="text" name="id_detail_barang" class="form-control" aria-describedby="basic-addon1" value="<?php echo $rowsData["id_detail_barang"]; ?>">
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text">Qty</span>
-                                                    <input type="text" name="id_detail_transaksi" class="form-control" aria-describedby="basic-addon1" value="<?php echo $rowsData["qty"]; ?>">
+                                                    <input type="text" name="qty" class="form-control" aria-describedby="basic-addon1" value="<?php echo $rowsData["qty"]; ?>">
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text">Nama Barang</span>
-                                                    <input type="text" name="id_detail_transaksi" class="form-control" aria-describedby="basic-addon1" value="<?php echo $rowsData["nama_barang"]; ?>">
+                                                    <input type="text" name="nama_barang" class="form-control" aria-describedby="basic-addon1" value="<?php echo $rowsData["nama_barang"]; ?>">
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text">Kode Jenis Barang</span>
-                                                    <input type="text" name="id_detail_transaksi" class="form-control" aria-describedby="basic-addon1" value="<?php echo $rowsData["kode_jenis_barang"]; ?>">
+                                                    <input type="text" name="kode_jenis_barang" class="form-control" aria-describedby="basic-addon1" value="<?php echo $rowsData["kode_jenis_barang"]; ?>">
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text">Harga Barang</span>
-                                                    <input type="text" name="id_detail_transaksi" class="form-control" aria-describedby="basic-addon1" value="<?php echo getRupiah($rowsData["harga"], 0) ?>">
+                                                    <input type="text" name="iharga" class="form-control" aria-describedby="basic-addon1" value="<?php echo getRupiah($rowsData["harga"], 0) ?>">
                                                 </div>
                                                 <div class="input-group mb-3">
-                                                    <span class="input-group-text">Gambar</span>
-                                                    <input type="text" name="id_detail_transaksi" class="form-control" aria-describedby="basic-addon1" value="<?php echo $rowsData["foto"]; ?>">
+                                                    <span class="input-group-text">Gambar
+                                                        <img src="../<?= $rowsData["foto"]; ?>" class="card-img-top img-thumbnail" alt="..." style="width: 10rem;">
+                                                    </span>
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text">Total Harga</span>
-                                                    <input type="text" name="id_detail_transaksi" class="form-control" aria-describedby="basic-addon1" value="<?php echo getRupiah($rowsData["harga"] * $rowsData["qty"], 0) ?>">
+                                                    <input type="text" name="harga" class="form-control" aria-describedby="basic-addon1" value="<?php echo getRupiah($rowsData["harga"] * $rowsData["qty"], 0) ?>">
                                                 </div>
 
                                             </div>
