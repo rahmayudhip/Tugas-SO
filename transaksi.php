@@ -59,6 +59,7 @@ session_start();
                         <span class="badge rounded-pill bg-primary"><b>Pemesanan pada :</b> <?= date('d-m-Y, H:i:s', strtotime($rowsData['tgl_transaksi'])); ?></span>
                         <span class="badge rounded-pill bg-warning"> <b>Total :</b> <?= getRupiah($rowsData["total_harga"], 0) ?></span>
                         <span class="badge rounded-pill bg-danger"> <b> Status Pemesanan :</b> <?= ($rowsData['lunas'] ? "Lunas" : "Belum Lunas")   ?></span>
+                        <span class="badge rounded-pill bg-info"> <b> Kode Unik :</b> <?= $rowsData['kode_unik'] ?></span>
                     </div>
                     <?php
                     $sql = "SELECT `dt`.* ,`b`.*
