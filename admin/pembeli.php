@@ -29,7 +29,6 @@
                     <th>Alamat</th>
                     <th>Gender</th>
                     <th>Tanggal Lahir</th>
-                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -49,13 +48,12 @@
                       <td><?= $rowsData["address"]; ?></td>
                       <td><?= $rowsData["gender"]; ?></td>
                       <td><?= $rowsData["birth_date"]; ?></td>
-                      <td>
+                      <!-- <td>
                         <div class="d-flex flex-row justify-content-center">
-                          <a href="#" class="btn btn-outline-info btn-sm m-1"><i class="fas fa-clipboard-list fa-sm fa-fw"></i></a>
-                          <!-- <a class="btn btn-outline-warning btn-sm m-1"><i class="fas fa-pencil-alt fa-sm fa-fw"></i></a>
-                          <a class="btn btn-outline-danger btn-sm m-1"><i class="fas fa-trash-alt fa-sm fa-fw"></i></a> -->
+                          <a class="btn btn-outline-warning btn-sm m-1"><i class="fas fa-pencil-alt fa-sm fa-fw"></i></a>
+                          <a class="btn btn-outline-danger btn-sm m-1"><i class="fas fa-trash-alt fa-sm fa-fw"></i></a>
                         </div>
-                      </td>
+                      </td> -->
                     </tr>
                   <?php endforeach; ?>
                 </tbody>
