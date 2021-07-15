@@ -72,8 +72,6 @@ session_start();
                     $result = $db->query($sql);
                     $data = $result->fetch_all(MYSQLI_ASSOC);
                     // var_dump($data);
-
-
                     foreach ($data as $dataTR) :
                     ?>
                         <div class="card-body">

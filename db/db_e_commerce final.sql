@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 15, 2021 at 05:46 AM
+-- Generation Time: Jul 15, 2021 at 06:03 AM
 -- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,29 +44,29 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `kode_jenis_barang`, `harga`, `rating`, `foto`, `stok`, `terjual`, `keterangan`) VALUES
-(1, 'Drawing Pen', 'AG1', 7000.00, 5.00, 'images/Gambar/drawingpen.jpg', 46, 28, 'Drawing pen terbaik dari snowman, terdiri ukuran ketebalan pulpen mulai dari 0.1 - 0.9'),
-(3, 'Kertas Sidu A4', 'KE2', 40000.00, 0.00, 'images/Gambar/sidua4.jpg', 0, 8, 'Jenis Barang : Kertas HVS <br>\r\nMerk : Sinar Dunia<br>\r\nUkuran : A4<br>\r\nGramatur : 70 Gram<br>\r\n1 pak isi 500 lembar<br>\r\n<br>'),
-(5, 'Kertas Sidu F4', 'KE2', 45000.00, 0.00, 'images/gambar/siduf4.jpg', 85, 15, 'Jenis Barang : Kertas HVS <br>\r\nMerk : Sinar Dunia<br>\r\nUkuran : F4<br>\r\nGramatur : 70 Gram<br>\r\n1 pak isi 500 lembar<br>\r\n<br>'),
-(6, 'Kertas Paper One A4', 'KE2', 42000.00, 0.00, 'images/gambar/paperonea4.png', 16, 6, 'Jenis Barang : Kertas HVS <br>\r\nMerk : Paper One<br>\r\nUkuran : A4<br>\r\nGramatur : 70 Gram<br>\r\n1 pak isi 500 lembar<br>\r\n<br>'),
-(7, 'Folio Bergaris', 'KE2', 22000.00, 0.00, 'images/gambar/foliobergaris.jpg', 4, 8, '1 Pack isi 100 Lembar<br>\r\nMerk: Sinar Dunia<br>\r\nGramatur: 70 gram<br>\r\nUkuran Kertas: 32 x 42 cm.<br>\r\n<br><br>'),
-(49, 'Gunting Kertas', 'AP3', 15000.00, 0.00, 'images/gambar/gunting.jpg', 49, 1, 'Jenis Barang : Gunting<br />\r\nMerk : Joyko<br />\r\nUkuran : 210 x 80 mm<br />\r\n Gramatur : 100 Gram<br />\r\n 1 buah'),
-(50, 'Gunting Zigzag/Gerigi', 'AP3', 10000.00, 0.00, 'images/gambar/zigzag.jpg', 44, 6, 'Jenis Barang : Gunting<br />\r\nMerk : Joyko<br />\r\nUkuran : 155 x 62 mm<br />\r\n Gramatur : 100 Gram<br />\r\n 1 buah'),
-(51, 'Cutter Kecil CU-503', 'AP3', 4900.00, 0.00, 'images/gambar/cutter1.jpeg', 50, 0, 'Jenis Barang : Cutter<br />\r\n Merk : Joyko<br />\r\n Ukuran : 175 x 12 mm<br />\r\n Gramatur : 28 Gram<br />\r\n 1 buah<br />'),
-(52, 'Isi Cutter Kecil', 'AP3', 5000.00, 0.00, 'images/gambar/isiCutter.jpeg', 44, 6, 'Merk: Deli<br />\r\n Gramatur: 30 gram<br />\r\n Ukuran Kertas: 13 x 1 cm<br />\r\n 1 Pack isi 5 buah'),
-(53, 'Pencil 9000B', 'AG1', 90000.00, 0.00, 'images/gambar/pencil9000.jpg', 48, 2, 'Jenis Barang : Pensil<br />\r\nMerk : Faber-Castell<br />\r\nUkuran : 9000<br />\r\nSize HB - 8B<br />\r\n1 pak isi 8 buah'),
-(54, 'Drawing Pen UniPin', 'AG1', 6600.00, 0.00, 'images/gambar/drawingpen.jpg', 49, 1, 'Jenis Barang : Drawing Pen<br />\r\nMerk : UniPin<br />\r\n Ukuran : 0.1mm - 0.5mm'),
-(55, 'Charcoal Pencil', 'AG1', 40000.00, 0.00, 'images/gambar/cpencil.jpg', 49, 1, 'Jenis Barang : Pensil<br />\r\n Merk : Drewnet<br />\r\n Ukuran : Medium<br />\r\n1 pak isi 5 buah'),
-(56, 'Mechanical Pencil', 'AG1', 42500.00, 0.00, 'images/gambar/mcpencil.jpg', 50, 0, 'Jenis Barang : Pensil Mekanik<br />\r\n Merk : BIC<br />\r\nUkuran : 0.7mm<br />\r\n1 pak isi 6 buah'),
-(57, 'Cat acrylic', 'AG1', 12500.00, 0.00, 'images/gambar/acrylic.jpg', 49, 1, 'Jenis Barang : Cat<br />\r\nMerk : Maries<br />\r\nUkuran : 50ml<br />\r\nWarna : Mix'),
-(58, 'Cat Poster', 'AG1', 79000.00, 0.00, 'images/gambar/catposter.jpg', 50, 0, 'Jenis Barang : Cat<br />\r\nMerk : Koi<br />\r\nUkuran : 30ml<br />\r\nWarna : Mix<br />\r\njumlah : 12 buah/pak'),
-(59, 'Cat Minyak', 'AG1', 124000.00, 0.00, 'images/gambar/minyak.jpg', 50, 0, 'Jenis Barang : Cat<br />\r\nMerk : Maries<br />\r\nUkuran : 10ml<br />\r\nWarna : Mix<br />\r\njumlah : 12 buah/pak'),
-(60, 'Palet cat', 'AG1', 66000.00, 0.00, 'images/gambar/wpalette.jpg', 50, 0, 'Jenis Barang : Palet<br />\r\nMerk : Kiky<br />\r\nUkuran : 20cm<br />\r\n Warna : Coklat<br />\r\nBahan : OakWood'),
-(61, 'Kuas Besar', 'AG1', 4500.00, 0.00, 'images/gambar/kuascat.jpg', 50, 0, 'Jenis Barang : Kuas<br />\r\nMerk : SKT<br />\r\nUkuran : 1 Inch-7Inch<br />\r\nTipe : Flat'),
-(62, 'Kuas Lukis', 'AG1', 14500.00, 0.00, 'images/gambar/kuaslukis.jpg', 49, 1, 'Jenis Barang : Kuas<br />\r\nMerk : Joyko<br />\r\nUkuran : 2-12<br />\r\nTipe : Rounded Brush'),
+(1, 'Drawing Pen', 'AG1', 20000.00, 5.00, 'images/gambar/drawingpen.jpg', 50, 24, 'Jenis Barang : Pensil\r\nMerk : Snowman\r\nUkutan : 0.1 - 0.9 mm\r\nSize HB - 8B\r\n'),
+(3, 'Kertas Sidu A4', 'KE2', 40000.00, 0.00, 'images/Gambar/sidua4.jpg', 5, 3, 'Jenis Barang : Kertas HVS <br>\r\nMerk : Sinar Dunia<br>\r\nUkuran : A4<br>\r\nGramatur : 70 Gram<br>\r\n1 pak isi 500 lembar'),
+(5, 'Kertas Sidu F4', 'KE2', 45000.00, 0.00, 'images/gambar/siduf4.jpg', 100, 0, 'Jenis Barang : Kertas HVS <br>\r\nMerk : Sinar Dunia<br>\r\nUkuran : F4<br>\r\nGramatur : 70 Gram<br>\r\n1 pak isi 500 lembar'),
+(6, 'Kertas Paper One A4', 'KE2', 41000.00, 0.00, 'images/gambar/paperonea4.png', 22, 0, 'Jenis Barang : Kertas HVS <br>\r\nMerk : Paper One<br>\r\nUkuran : A4<br>\r\nGramatur : 70 Gram<br>\r\n1 pak isi 500 lembar'),
+(7, 'Folio Bergaris', 'KE2', 21000.00, 0.00, 'images/gambar/foliobergaris.jpg', 0, 0, '1 Pack isi 100 Lembar<br>\r\nMerk: Sinar Dunia<br>\r\nGramatur: 70 gram<br>\r\nUkuran Kertas: 32 x 42 cm'),
+(49, 'Gunting Kertas', 'AP3', 15000.00, 0.00, 'images/gambar/gunting.jpg', 50, 0, 'Jenis Barang : Gunting<br />\r\nMerk : Joyko<br />\r\nUkuran : 210 x 80 mm<br />\r\n Gramatur : 100 Gram<br />\r\n 1 buah'),
+(50, 'Gunting Zigzag/Gerigi', 'AP3', 10000.00, 0.00, 'images/gambar/zigzag.jpg', 47, 3, 'Jenis Barang : Gunting<br />\r\nMerk : Joyko<br />\r\nUkuran : 155 x 62 mm<br />\r\n Gramatur : 100 Gram<br />\r\n 1 buah'),
+(51, 'Cutter Kecil CU-503', 'AP3', 5000.00, 0.00, 'images/gambar/cutter1.jpeg', 49, 1, 'Jenis Barang : Cutter<br />\r\n Merk : Joyko<br />\r\n Ukuran : 175 x 12 mm<br />\r\n Gramatur : 28 Gram<br />\r\n 1 buah<br />'),
+(52, 'Isi Cutter Kecil', 'AP3', 5000.00, 0.00, 'images/gambar/isiCutter.jpeg', 50, 0, 'Merk: Deli<br />\r\n Gramatur: 30 gram<br />\r\n Ukuran Kertas: 13 x 1 cm<br />\r\n 1 Pack isi 5 buah'),
+(53, 'Pencil 9000B', 'AG1', 90000.00, 0.00, 'images/gambar/pencil9000.jpg', 49, 1, 'Jenis Barang : Pensil<br />\r\nMerk : Faber-Castell<br />\r\nUkuran : 9000<br />\r\nSize HB - 8B<br />\r\n1 pak isi 8 buah'),
+(54, 'Drawing Pen UniPin', 'AG1', 7000.00, 0.00, 'images/gambar/drawingpen.jpg', 48, 2, 'Jenis Barang : Drawing Pen<br />\r\nMerk : UniPin<br />\r\n Ukuran : 0.1mm - 0.5mm'),
+(55, 'Charcoal Pencil', 'AG1', 40000.00, 0.00, 'images/gambar/cpencil.jpg', 50, 0, 'Jenis Barang : Pensil<br />\r\n Merk : Drewnet<br />\r\n Ukuran : Medium<br />\r\n1 pak isi 5 buah'),
+(56, 'Mechanical Pencil', 'AG1', 43000.00, 0.00, 'images/gambar/mcpencil.jpg', 50, 0, 'Jenis Barang : Pensil Mekanik<br />\r\n Merk : BIC<br />\r\nUkuran : 0.7mm<br />\r\n1 pak isi 6 buah'),
+(57, 'Cat acrylic', 'AG1', 13000.00, 0.00, 'images/gambar/acrylic.jpg', 50, 0, 'Jenis Barang : Cat<br />\r\nMerk : Maries<br />\r\nUkuran : 50ml<br />\r\nWarna : Mix'),
+(58, 'Cat Poster', 'AG1', 80000.00, 0.00, 'images/gambar/catposter.jpg', 50, 0, 'Jenis Barang : Cat<br />\r\nMerk : Koi<br />\r\nUkuran : 30ml<br />\r\nWarna : Mix<br />\r\njumlah : 12 buah/pak'),
+(59, 'Cat Minyak', 'AG1', 120000.00, 0.00, 'images/gambar/minyak.jpg', 50, 0, 'Jenis Barang : Cat<br />\r\nMerk : Maries<br />\r\nUkuran : 10ml<br />\r\nWarna : Mix<br />\r\njumlah : 12 buah/pak'),
+(60, 'Palet cat', 'AG1', 66000.00, 0.00, 'images/gambar/wpalette.jpg', 48, 2, 'Jenis Barang : Palet<br />\r\nMerk : Kiky<br />\r\nUkuran : 20cm<br />\r\n Warna : Coklat<br />\r\nBahan : OakWood'),
+(61, 'Kuas Besar', 'AG1', 5000.00, 0.00, 'images/gambar/kuascat.jpg', 50, 0, 'Jenis Barang : Kuas<br />\r\nMerk : SKT<br />\r\nUkuran : 1 Inch-7Inch<br />\r\nTipe : Flat'),
+(62, 'Kuas Lukis', 'AG1', 14000.00, 0.00, 'images/gambar/kuaslukis.jpg', 50, 0, 'Jenis Barang : Kuas<br />\r\nMerk : Joyko<br />\r\nUkuran : 2-12<br />\r\nTipe : Rounded Brush'),
 (63, 'Penggaris Besi', 'AG1', 14000.00, 0.00, 'images/gambar/penggarisbesi.jpg', 50, 0, 'Jenis Barang : Penggaris<br />\r\nMerk : Joyko<br />\r\nUkuran : 25 Inch<br />\r\nWarna : Silver'),
 (64, 'Penggaris Segitiga', 'AG1', 31000.00, 0.00, 'images/gambar/penggarissegitiga.jpg', 50, 0, 'Jenis Barang : Penggaris<br />\r\n Merk : Kenko<br />\r\nUkuran : 7 Inch<br />\r\nWarna : Hitam<br />\r\nBahan : Pelastik'),
-(65, 'Color Pencil', 'AG1', 224500.00, 0.00, 'images/gambar/pensilwarna.jpg', 50, 0, 'Jenis Barang : Pensil<br />\r\nMerk : Faber-Castell<br />\r\nUkuran : 1 set<br />\r\nTipe : Pollychromos 120'),
-(66, 'Pen Brush', 'AG1', 54000.00, 0.00, 'images/gambar/brushp.jpg', 50, 0, 'Jenis Barang : Kuas Pulpen<br />\r\nMerk : TiTi<br />\r\nUkuran : 2<br />\r\nTipe : Rounded Brush'),
+(65, 'Color Pencil', 'AG1', 225000.00, 0.00, 'images/gambar/pensilwarna.jpg', 50, 0, 'Jenis Barang : Pensil<br />\r\nMerk : Faber-Castell<br />\r\nUkuran : 1 set<br />\r\nTipe : Pollychromos 120'),
+(66, 'Pen Brush', 'AG1', 55000.00, 0.00, 'images/gambar/brushp.jpg', 50, 0, 'Jenis Barang : Kuas Pulpen<br />\r\nMerk : TiTi<br />\r\nUkuran : 2<br />\r\nTipe : Rounded Brush'),
 (67, 'WaterColor', 'AG1', 74000.00, 0.00, 'images/gambar/koi.jpg', 50, 0, 'Jenis Barang : Cat Air<br />\r\nMerk : Koi<br />\r\nUkuran : 9gr<br />\r\nWarna : Mix'),
 (68, 'Crayon', 'AG1', 71000.00, 0.00, 'images/gambar/crayon.jpg', 50, 0, 'Jenis Barang : kerayon<br />\r\nMerk : TiTi<br />\r\nUkuran : 12 x 2<br />\r\nWarna : Mix');
 
@@ -82,6 +82,15 @@ CREATE TABLE `cart` (
   `cart_user_id` int(11) NOT NULL,
   `qty` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id_cart`, `cart_id_barang`, `cart_user_id`, `qty`) VALUES
+(5, 3, 4, 3),
+(6, 5, 4, 1),
+(7, 6, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -101,11 +110,10 @@ CREATE TABLE `detail_transaksi` (
 --
 
 INSERT INTO `detail_transaksi` (`id`, `id_detail_transaksi`, `id_detail_barang`, `qty`) VALUES
-(6, 'tr-001', 6, 1),
-(7, 'tr-002', 50, 1),
-(8, 'tr-002', 55, 1),
-(9, 'tr-003', 50, 2),
-(10, 'tr-003', 52, 3);
+(1, 'tr-001', 50, 3),
+(2, 'tr-002', 51, 1),
+(3, 'tr-002', 54, 2),
+(4, 'tr-003', 60, 2);
 
 -- --------------------------------------------------------
 
@@ -225,8 +233,8 @@ ALTER TABLE `cart`
 --
 ALTER TABLE `detail_transaksi`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `detail_transaksi_ibfk_1` (`id_detail_transaksi`),
-  ADD KEY `detail_transaksi_ibfk_2` (`id_detail_barang`);
+  ADD KEY `detail_transaksi_ibfk_2` (`id_detail_barang`),
+  ADD KEY `detail_transaksi_ibfk_1` (`id_detail_transaksi`);
 
 --
 -- Indexes for table `jenis_barang`
@@ -267,23 +275,29 @@ ALTER TABLE `barang`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `barang`
+--
+ALTER TABLE `barang`
+  ADD CONSTRAINT `barang_ibfk_1` FOREIGN KEY (`kode_jenis_barang`) REFERENCES `jenis_barang` (`kode_jenis_barang`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `cart`
@@ -292,13 +306,6 @@ ALTER TABLE `cart`
   ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`cart_id_barang`) REFERENCES `barang` (`id_barang`),
   ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`cart_id_barang`) REFERENCES `barang` (`id_barang`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`cart_user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `detail_transaksi`
---
-ALTER TABLE `detail_transaksi`
-  ADD CONSTRAINT `detail_transaksi_ibfk_1` FOREIGN KEY (`id_detail_transaksi`) REFERENCES `transaksi` (`id_transaksi`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `detail_transaksi_ibfk_2` FOREIGN KEY (`id_detail_barang`) REFERENCES `barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
