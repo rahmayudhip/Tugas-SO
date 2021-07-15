@@ -16,7 +16,9 @@ for ($i = 0; $i < count($_POST['id_barang']); $i++) {
   $totalHarga = $totalHarga + ($hargaArr[$i] * $qtyArr[$i]);
 }
 
-$pembelian = $_POST['pembelian'];
+date_default_timezone_set('Asia/Jakarta');
+$pembelian = date('Y-m-d h:i:s', time());
+
 
 $totalHarga = $totalHarga + ($random);
 

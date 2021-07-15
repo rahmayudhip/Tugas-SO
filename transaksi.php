@@ -33,30 +33,71 @@ session_start();
         </div>
     </div>
 
-    <!-- Jumbotron Start -->
-    <section class="jumbotron my-3">
-        <div class="container">
-            <div class="card">
-                <div class="card-header">
-                    Alat Pemotong
-                </div>
-                <div class="card-body">
-                    <div class="row g-0">
-                        <div class="col-md-2">
-                            <img src="images/Gambar/cutter1.jpeg" class="card-img-top img-thumbnail" alt="..." style="width: 10rem;">
-                        </div>
-                        <div class="col-md-8">
-                            <h5 class="card-title">Cutter</h5>
-                            <p class="card-text" style="color: rgba(0, 0, 0, 0.4);">Tanggal</p>
-                            <p class="card-text">5000</p>
-                            <a href="#" class="btn btn-primary">Button</a>
-                        </div>
+    <?php
+    $db = dbConnect();
+    $sql = "SELECT t.id_transaksi, t.tgl_transaksi, t.total_harga ,t.lunas, t.kode_unik
+    FROM transaksi t 
+    INNER JOIN user u 
+    -- INNER JOIN detail_transaksi dt
+    ON t.user_id = u.user_id  
+    -- t.id_transaksi = dt.id_detail_transaksi 
+    WHERE t.user_id = {$_SESSION["UserID"]} ORDER BY t.tgl_transaksi DESC";
+    $result = $db->query($sql);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    // var_dump($rows);
+    $total = 0;
+
+    foreach ($rows as $rowsData) :
+    ?>
+
+        <!-- Jumbotron Start -->
+        <section class="jumbotron my-3">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="badge rounded-pill bg-success"><b>Kode Transaksi :</b> <?= $rowsData['id_transaksi']; ?></span>
+                        <span class="badge rounded-pill bg-primary"><b>Pemesanan pada :</b> <?= date('d-m-Y, H:i:s', strtotime($rowsData['tgl_transaksi'])); ?></span>
+                        <span class="badge rounded-pill bg-warning"> <b>Total :</b> <?= getRupiah($rowsData["total_harga"], 0) ?></span>
+                        <span class="badge rounded-pill bg-danger"> <b> Status Pemesanan :</b> <?= ($rowsData['lunas'] ? "Lunas" : "Belum Lunas")   ?></span>
                     </div>
+                    <?php
+                    $sql = "SELECT `dt`.* ,`b`.*
+                    FROM `transaksi` `t` 
+                    INNER JOIN `detail_transaksi` `dt`
+                    INNER JOIN `barang` `b`
+                    ON `t`.`id_transaksi` = `dt`.`id_detail_transaksi` 
+                    AND `dt`.`id_detail_barang` = `b`.`id_barang`
+                    WHERE `dt`.`id_detail_transaksi` = '{$rowsData['id_transaksi']}'";
+                    $result = $db->query($sql);
+                    $data = $result->fetch_all(MYSQLI_ASSOC);
+                    // var_dump($data);
+
+
+                    foreach ($data as $dataTR) :
+                    ?>
+                        <div class="card-body">
+                            <div class="row g-0">
+                                <div class="col-md-2">
+                                    <img src="<?= $dataTR["foto"] ?>" class="card-img-top img-thumbnail" style="width: 10rem;">
+                                </div>
+                                <div class="col-md-8">
+                                    <h5 class="card-title"><?= $dataTR["nama_barang"] ?></h5>
+                                    <p class="card-text">
+                                        <?= "{$dataTR["qty"]} x " . getRupiah($dataTR["harga"], 0) . " = " ?>
+                                        <?= getRupiah(($dataTR["qty"] * $dataTR["harga"]), 0) ?>
+                                        <!-- <?php $total = $total + ($dataTR["qty"] * $dataTR["harga"]) ?> -->
+                                    </p>
+                                    <p class="card-text">
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach ?>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    <?php endforeach ?>
 
     <!--Footer Start-->
     <section class="news py-5">
